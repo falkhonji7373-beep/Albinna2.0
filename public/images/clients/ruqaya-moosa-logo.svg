@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 72" fill="none">
+  <!-- Monogram circle -->
+  <circle cx="32" cy="36" r="24" fill="#8B1A1A" opacity="0.08"/>
+  <circle cx="32" cy="36" r="24" stroke="#8B1A1A" stroke-width="1.5" fill="none"/>
+  <!-- RM monogram -->
+  <text x="32" y="41" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#8B1A1A" text-anchor="middle" letter-spacing="-0.5">RM</text>
+  <!-- Divider -->
+  <line x1="66" y1="14" x2="66" y2="58" stroke="#8B1A1A" stroke-width="0.8" opacity="0.3"/>
+  <!-- Company name -->
+  <text x="78" y="30" font-family="Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1a1210" letter-spacing="1.5">RUQAYA MOOSA</text>
+  <!-- Arabic name -->
+  <text x="78" y="48" font-family="serif" font-size="11" fill="#8B1A1A" letter-spacing="0.3">رقية موسى</text>
+  <!-- Tagline -->
+  <text x="78" y="62" font-family="Arial, sans-serif" font-size="7" fill="#888" letter-spacing="0.8">MUSCAT · OMAN</text>
+</svg>

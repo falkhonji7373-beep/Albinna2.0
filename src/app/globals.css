@@ -1,0 +1,345 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  /* Prevent overscroll bounce on desktop; allow native momentum on mobile */
+  overscroll-behavior-y: none;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* iOS momentum scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* Prevent mobile tap highlight flash */
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  /* ── Typography ── */
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body: 'Josefin Sans', system-ui, sans-serif;
+
+  /* ── Brand palette ── */
+  --red:         #f5141f;
+  --red-dark:    #c9101a;
+  --red-light:   #ff3d47;
+  --gold:        #c9a96e;
+
+  /* ── Light mode surfaces ── */
+  --bg:            #f8f6f3;
+  --fg:            #1a1612;
+  --fg-muted:      rgba(26,22,18,0.65);
+  --fg-subtle:     rgba(26,22,18,0.48);
+  --border-color:  rgba(26,22,18,0.09);
+  --border-strong: rgba(26,22,18,0.18);
+  --section-bg:    #f8f6f3;
+  --alt-bg:        #f0ede8;
+  --card-bg:       #ffffff;
+
+  /* ── Component colours ── */
+  --stats-bg:        #f0ede8;
+  --stats-num:       #1a1612;
+  --testimonial-bg:  #f0ede8;
+  --testimonial-fg:  #1a1612;
+  --quote-mark-color: rgba(26,22,18,0.05);
+  --dark-bg:         #0d0d0d;
+  --footer-bg:       #0d0d0d;
+  --footer-fg:       #ffffff;
+  --banner-bg:       #0d0d0d;
+  --input-bg:        #ffffff;
+  --tweaks-bg:       #f8f6f3;
+  --hero-overlay:    linear-gradient(110deg, rgba(0,0,0,0.88) 35%, rgba(0,0,0,0.30) 100%);
+
+  /* ── Animation timing tokens ── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-reveal: 0.8s;
+  --dur-scale:  0.7s;
+  --dur-micro:  0.2s;
+}
+
+/* ─── Film grain overlay ─── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
+
+/* ─── Keyframes ─── */
+@keyframes fadeIn      { from{opacity:0} to{opacity:1} }
+@keyframes dropIn      { from{opacity:0;transform:translateX(-50%) translateY(-10px)} to{opacity:1;transform:translateX(-50%) translateY(0)} }
+@keyframes scrollDrop  { 0%{transform:translateY(-100%);opacity:0} 30%{opacity:1} 100%{transform:translateY(250%);opacity:0} }
+@keyframes slideInRight{ from{transform:translateX(100%)} to{transform:translateX(0)} }
+@keyframes shimmer     { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+@keyframes pulse       { 0%,100%{opacity:1} 50%{opacity:0.5} }
+@keyframes revealUp    { from{opacity:0;transform:translateY(28px);filter:blur(4px)} to{opacity:1;transform:translateY(0);filter:blur(0px)} }
+@keyframes revealLeft  { from{opacity:0;transform:translateX(-20px);filter:blur(3px)} to{opacity:1;transform:translateX(0);filter:blur(0px)} }
+@keyframes scaleIn     { from{opacity:0;transform:scale(0.97);filter:blur(3px)} to{opacity:1;transform:scale(1);filter:blur(0px)} }
+@keyframes lineGrow    { from{width:0} to{width:48px} }
+@keyframes testimonialProgress { from{transform:scaleX(0)} to{transform:scaleX(1)} }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.marquee-track { animation: marquee 28s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ─── Scroll reveal — GPU-promoted layers ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  /* Promote to own compositing layer before animation starts */
+  will-change: opacity, transform;
+}
+.reveal.in {
+  animation: revealUp var(--dur-reveal) var(--ease-out-expo) forwards;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  will-change: opacity, transform;
+}
+.reveal-left.in {
+  animation: revealLeft var(--dur-reveal) var(--ease-out-expo) forwards;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.97);
+  will-change: opacity, transform;
+}
+.reveal-scale.in {
+  animation: scaleIn var(--dur-scale) var(--ease-out-expo) forwards;
+}
+
+/* Release will-change after animation completes to free GPU memory */
+.reveal.in, .reveal-left.in, .reveal-scale.in {
+  animation-fill-mode: forwards;
+}
+
+.d1.in { animation-delay: 0.08s; }
+.d2.in { animation-delay: 0.16s; }
+.d3.in { animation-delay: 0.24s; }
+.d4.in { animation-delay: 0.34s; }
+
+/* ─── Card hover — GPU-composited transform only ─── */
+.card-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.35) 55%, transparent 100%);
+  opacity: 0;
+  /* opacity is compositor-thread safe */
+  transition: opacity 0.38s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.75rem 2rem;
+  /* Promote overlay to own layer to avoid triggering parent repaint */
+  will-change: opacity;
+}
+.card-hover-wrap:hover .card-hover-overlay { opacity: 1; }
+.card-hover-wrap:hover .card-img           { transform: scale(1.05); }
+
+.card-img {
+  /* GPU-only: transform on the compositor thread, no layout or paint */
+  transition: transform 0.7s var(--ease-out-expo);
+  will-change: transform;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* Prevent sub-pixel jitter on scale transforms */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ─── Luxury button press ─── */
+.btn-press {
+  transition: transform var(--dur-micro) ease, opacity 0.22s;
+  will-change: transform;
+}
+.btn-press:active { transform: scale(0.97) !important; }
+
+/* ─── CSS hover states (replaces JS onMouseEnter mutations) ─── */
+.btn-primary:hover   { opacity: 0.88; }
+.btn-outline:hover   { background: var(--fg) !important; color: #fff !important; border-color: var(--fg) !important; }
+.btn-outline-inv:hover { border-color: rgba(255,255,255,0.75) !important; background: rgba(255,255,255,0.07) !important; }
+.btn-white-on-red:hover { opacity: 0.88; }
+
+/* ─── Red accent underline on section labels ─── */
+.section-label-line {
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: var(--red);
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+/* ─── Image skeleton ─── */
+.img-skeleton {
+  background: linear-gradient(90deg, var(--alt-bg) 0%, var(--border-color) 50%, var(--alt-bg) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite;
+}
+
+/* ─── Luxury divider ─── */
+.luxury-divider {
+  width: 48px;
+  height: 1px;
+  background: var(--red);
+  margin: 1.25rem 0;
+}
+
+/* ─── Responsive overrides ─── */
+@media (max-width: 900px) {
+  .services-grid       { grid-template-columns: 1fr !important; }
+  .projects-grid       { grid-template-columns: 1fr 1fr !important; }
+  .stats-grid          { grid-template-columns: repeat(2,1fr) !important; }
+  .contact-grid        { grid-template-columns: 1fr !important; }
+  .form-row            { grid-template-columns: 1fr !important; }
+  .service-detail-grid { grid-template-columns: 1fr !important; }
+  .footer-grid         { grid-template-columns: 1fr !important; }
+  .desktop-nav         { display: none !important; }
+  .mobile-nav-btn      { display: flex !important; }
+  .about-grid          { grid-template-columns: 1fr !important; }
+  .svc-header-grid     { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+  .trust-grid          { grid-template-columns: 1fr 1fr !important; }
+  .projects-grid       { grid-template-columns: 1fr !important; }
+
+  /* Hero split — stack vertically on mobile */
+  .hero-split          { grid-template-columns: 1fr !important; min-height: unset !important; }
+  .hero-video-panel    { min-height: 55dvh; order: -1; }
+}
+@media (max-width: 600px) {
+  .projects-grid { grid-template-columns: 1fr !important; }
+  .stats-grid    { grid-template-columns: repeat(2,1fr) !important; }
+  .trust-grid    { grid-template-columns: 1fr !important; }
+}
+
+/* ─── Screen-reader only utility ─── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ─── Base ─── */
+p       { text-wrap: pretty; }
+img     { display: block; }
+button  { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; }
+select option { background: #111; color: #fff; }
+a { color: inherit; }
+
+/* ─── Focus-visible — keyboard navigation accessibility ─── */
+/* Remove default outline for mouse users only */
+:focus:not(:focus-visible) { outline: none; }
+
+/* Clear, branded focus ring for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Inputs get a slightly different treatment — inset ring */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 0 4px rgba(245,20,31,0.12);
+}
+
+/* Nav links and anchor-style buttons */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ─── Arabic / RTL overrides ─── */
+/* When dir="rtl" is set on <html>, switch both font stacks to Cairo          */
+/* and reset letter-spacing (Latin tracking looks wrong on Arabic glyphs).    */
+[dir="rtl"] {
+  --font-display: 'Cairo', system-ui, sans-serif;
+  --font-body:    'Cairo', system-ui, sans-serif;
+}
+
+/* Logical-property fixes so spacing flips automatically for RTL */
+[dir="rtl"] .section-label-line {
+  margin-right: 0;
+  margin-inline-end: 12px;
+}
+
+[dir="rtl"] .luxury-divider {
+  margin-inline-start: 0;
+}
+
+/* ─── Cinzel display overrides for elegance ─── */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   prefers-reduced-motion — KILL all motion, restore instant state
+   ═══════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+
+  /* 1. Disable smooth scrolling */
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  /* 2. Kill all durations — effectively instant transitions/animations */
+  *,
+  *::before,
+  *::after {
+    animation-duration:        0.01ms !important;
+    animation-iteration-count: 1      !important;
+    animation-delay:           0ms    !important;
+    transition-duration:       0.01ms !important;
+    transition-delay:          0ms    !important;
+  }
+
+  /* 3. Show reveal elements immediately — no sliding, no fading, no blur */
+  .reveal,
+  .reveal-left,
+  .reveal-scale {
+    opacity:    1 !important;
+    transform:  none !important;
+    filter:     none !important;
+    will-change: auto !important;
+    animation:  none !important;
+  }
+
+  /* 3b. Kill film grain */
+  body::after { display: none !important; }
+
+  /* 4. No card scale on hover */
+  .card-hover-wrap:hover .card-img { transform: none !important; }
+  .card-img { transition: none !important; will-change: auto !important; }
+
+  /* 5. No button press scale */
+  .btn-press:active { transform: none !important; }
+
+  /* 6. No shimmer */
+  .img-skeleton { animation: none !important; background: var(--alt-bg) !important; }
+}

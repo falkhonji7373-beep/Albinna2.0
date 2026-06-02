@@ -1,0 +1,103 @@
+{
+  "agents": {
+    "agent-1780305411324-k5kwie": {
+      "agentId": "agent-1780305411324-k5kwie",
+      "agentType": "coordinator",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic",
+        "task": "Coordinate all agents working on Al Binaa Construction website (Next.js 14, static export, bilingual EN/AR, deployed on Railway at https://web-production-9334f.up.railway.app). Oversee SEO, performance, code quality, and production validation tasks."
+      },
+      "createdAt": "2026-06-01T09:16:51.331Z",
+      "model": "sonnet",
+      "modelRoutedBy": "router"
+    },
+    "agent-1780305418762-uux6jj": {
+      "agentId": "agent-1780305418762-uux6jj",
+      "agentType": "analyst",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic",
+        "task": "Monitor and improve SEO for Al Binaa Construction website. Track: title tags (all under 60 chars), meta descriptions, canonical URLs, hreflang EN/AR, structured data (LocalBusiness + Organization schema), Core Web Vitals on Railway deployment. Report issues and recommendations."
+      },
+      "createdAt": "2026-06-01T09:16:58.768Z",
+      "model": "sonnet",
+      "modelRoutedBy": "router"
+    },
+    "agent-1780305418970-hl9n5b": {
+      "agentId": "agent-1780305418970-hl9n5b",
+      "agentType": "analyst",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic",
+        "task": "Audit performance of Al Binaa Next.js 14 static site. Check: bundle sizes, image optimization (WebP/AVIF), LCP/CLS/INP scores, font loading (preload strategy), lazy loading implementation, build output size vs threshold. Flag any regressions."
+      },
+      "createdAt": "2026-06-01T09:16:58.977Z",
+      "model": "opus",
+      "modelRoutedBy": "router"
+    },
+    "agent-1780305426161-7wjaye": {
+      "agentId": "agent-1780305426161-7wjaye",
+      "agentType": "reviewer",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic",
+        "task": "Review Al Binaa codebase quality. Focus: Next.js 14 best practices, next-intl bilingual patterns, TypeScript strictness, component reuse, inline-style consistency vs DESIGN.md, accessibility (alt text, aria-labels, focus states, RTL support), and any dead code."
+      },
+      "createdAt": "2026-06-01T09:17:06.170Z",
+      "model": "sonnet",
+      "modelRoutedBy": "router"
+    },
+    "agent-1780305426416-2l1dlp": {
+      "agentId": "agent-1780305426416-2l1dlp",
+      "agentType": "tester",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic",
+        "task": "Validate Al Binaa production deployment at https://web-production-9334f.up.railway.app. Check: all 8 static routes (en/ar x home/about/services/projects/contact) return 200, security headers present (HSTS, X-Frame-Options, X-Content-Type-Options), no console errors, bilingual switching works, quote form submits correctly."
+      },
+      "createdAt": "2026-06-01T09:17:06.423Z",
+      "model": "sonnet",
+      "modelRoutedBy": "router"
+    },
+    "agent-1780305449118-xitql3": {
+      "agentId": "agent-1780305449118-xitql3",
+      "agentType": "coder",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic",
+        "task": "Improve Al Binaa website content and copy. Tasks: review English/Arabic translations for construction industry accuracy, flag any placeholder or thin content, suggest missing pages (e.g. individual project detail pages, blog/news section), improve call-to-action copy strength."
+      },
+      "createdAt": "2026-06-01T09:17:29.284Z",
+      "model": "sonnet",
+      "modelRoutedBy": "router"
+    },
+    "agent-1780305450776-dcfo58": {
+      "agentId": "agent-1780305450776-dcfo58",
+      "agentType": "researcher",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic",
+        "task": "Research Al Binaa competitors in Oman construction market. Identify top 5 construction company websites in Muscat/Oman. Compare: SEO positioning, service offerings, design quality, trust signals, content depth. Report gaps Al Binaa can exploit."
+      },
+      "createdAt": "2026-06-01T09:17:30.815Z",
+      "model": "sonnet",
+      "modelRoutedBy": "router"
+    }
+  },
+  "version": "3.0.0"
+}

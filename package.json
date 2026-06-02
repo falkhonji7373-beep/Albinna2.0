@@ -1,0 +1,25 @@
+{
+  "name": "al-binaa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3002",
+    "build": "next build",
+    "start": "serve out -p ${PORT:-3000}",
+    "serve": "npx serve out -p 3002",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "next-intl": "^4.11.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "serve": "14.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://www.albinaa.om/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.albinaa.om/en"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.albinaa.om/en"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services Hub -->
+  <url>
+    <loc>https://www.albinaa.om/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/services"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/services"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service Detail Pages -->
+  <url>
+    <loc>https://www.albinaa.om/en/services/structure</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/services/structure"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/services/structure"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/services/structure</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/services/structure"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/services/structure"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/en/services/mep</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/services/mep"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/services/mep"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/services/mep</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/services/mep"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/services/mep"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/en/services/finishing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/services/finishing"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/services/finishing"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/services/finishing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/services/finishing"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/services/finishing"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Projects Hub -->
+  <url>
+    <loc>https://www.albinaa.om/en/projects</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/projects</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Project Detail Pages — Completed -->
+  <url>
+    <loc>https://www.albinaa.om/en/projects/rimal-1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/rimal-1"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/rimal-1"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/projects/rimal-1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/rimal-1"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/rimal-1"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/en/projects/office-1991</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/office-1991"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/office-1991"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/projects/office-1991</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/office-1991"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/office-1991"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/en/projects/the-office</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/the-office"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/the-office"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/projects/the-office</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/the-office"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/the-office"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/en/projects/al-wadi-complex</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/al-wadi-complex"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/al-wadi-complex"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/projects/al-wadi-complex</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/al-wadi-complex"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/al-wadi-complex"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/en/projects/desert-nights-resort</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/desert-nights-resort"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/desert-nights-resort"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/projects/desert-nights-resort</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/desert-nights-resort"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/desert-nights-resort"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/en/projects/al-wadi-hotel-sohar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/al-wadi-hotel-sohar"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/al-wadi-hotel-sohar"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/projects/al-wadi-hotel-sohar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/al-wadi-hotel-sohar"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/al-wadi-hotel-sohar"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/en/projects/sur-plaza-hotel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/sur-plaza-hotel"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/sur-plaza-hotel"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/projects/sur-plaza-hotel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/sur-plaza-hotel"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/sur-plaza-hotel"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/en/projects/al-qurm-hills</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/al-qurm-hills"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/al-qurm-hills"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/projects/al-qurm-hills</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/al-qurm-hills"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/al-qurm-hills"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/en/projects/al-qurm-terrace</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/al-qurm-terrace"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/al-qurm-terrace"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/projects/al-qurm-terrace</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/projects/al-qurm-terrace"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/projects/al-qurm-terrace"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Qualifications -->
+  <url>
+    <loc>https://www.albinaa.om/en/qualifications</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/qualifications"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/qualifications"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/qualifications</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/qualifications"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/qualifications"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://www.albinaa.om/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/about"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/about"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Why Al Binaa (comparison/differentiator page) -->
+  <url>
+    <loc>https://www.albinaa.om/en/why-al-binaa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/why-al-binaa"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/why-al-binaa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.albinaa.om/en/why-al-binaa"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/why-al-binaa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/why-al-binaa"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/why-al-binaa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.albinaa.om/en/why-al-binaa"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.albinaa.om/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/contact"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.albinaa.om/ar/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.albinaa.om/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.albinaa.om/ar/contact"/>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

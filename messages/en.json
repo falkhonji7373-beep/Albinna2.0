@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Capabilities",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "quote": "Get in Touch"
+  },
+  "hero": {
+    "title": "Oman's Premier\nConstruction Partner",
+    "subtitle": "Since 1997, Al Binaa has delivered over 20 structures across Oman's residential, commercial, and hospitality sectors — every project executed under a single management structure, with no discipline outsourced and no accountability shared.",
+    "cta_primary": "Explore Our Portfolio",
+    "cta_secondary": "Begin the Conversation"
+  },
+  "stats": {
+    "years": "Years of Uninterrupted Delivery",
+    "projects": "Structures Delivered",
+    "divisions": "In-House Disciplines",
+    "professionals": "Field & Professional Team"
+  },
+  "services": {
+    "label": "What Do We Build?",
+    "heading": "Three Disciplines.\nOne Contract.",
+    "body": "Most projects fail at the interfaces between contractors. Ours don't — because there are no interfaces. Structure, MEP, and Interior Finishing: three disciplines under one management, one quality standard, one contract.",
+    "view_all": "View All Capabilities"
+  },
+  "projects_section": {
+    "label": "Selected Work",
+    "heading": "Delivered Across\nOman.",
+    "view_all": "View All Projects"
+  },
+  "cta": {
+    "heading": "Most projects fail at the interfaces\nbetween contractors.",
+    "sub": "Ours don't — because there are none. Tell us about your project.",
+    "button": "Begin the Conversation →"
+  },
+  "footer": {
+    "tagline": "One company. Three disciplines. Twenty-eight years of uninterrupted delivery across Oman's residential, commercial, and hospitality sectors.",
+    "rights": "© 2026 Al Binaa Construction & Industry SAOC. All rights reserved.",
+    "services": "Capabilities",
+    "projects": "Projects",
+    "contact": "Contact",
+    "address_label": "Address",
+    "address": "1212 Way 2708, Muscat 100, Oman",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "hours_label": "Hours",
+    "hours": "Sun – Thu: 8 AM – 5 PM"
+  },
+  "common": {
+    "enquire": "Enquire →",
+    "get_free_quote": "Begin the Conversation",
+    "start_project": "Begin the Conversation →",
+    "learn_more": "Learn More"
+  },
+  "about": {
+    "banner_title": "About Al Binaa",
+    "banner_sub": "Est. 1997, Muscat — twenty-eight years of uninterrupted delivery.",
+    "story_label": "Our Story",
+    "story_heading": "Built in Oman.\nBuilt for Oman.",
+    "story_p1": "Founded in 1997 under the Al Khonji Group, Al Binaa Construction & Industry SAOC has grown from a civil contractor into one of Oman's most trusted full-service builders — 20+ structures delivered across residential, commercial, and hospitality, with every discipline retained in-house. From private villas to 10-storey towers, we transform briefs into landmarks.",
+    "story_p2": "Our engineers, supervisors, and skilled tradespeople are employed directly — not agency-sourced — and deliver every project on time, within budget, and to the highest standards of safety and quality. Every building carries our name. That standard has not changed in twenty-eight years of uninterrupted operation.",
+    "story_est": "Est. under the Al Khonji Group",
+    "mission_label": "Mission",
+    "mission_heading": "Our Mission.",
+    "mission_body": "To deliver every phase of a construction project — structure, systems, and finishing — under a single management structure, so no discipline is outsourced and no accountability is shared.\n\nOne contract. One team. One standard — applied to every project we undertake, regardless of scale.",
+    "vision_label": "Vision",
+    "vision_heading": "Our Vision.",
+    "vision_body": "To be the contractor Oman's most serious developers and institutional clients return to — not because of marketing, but because of twenty-eight years of uninterrupted delivery.\n\nThe benchmark integrated contractor in Oman: known for reliability, technical depth, and a standard of execution that has never been compromised.",
+    "leadership_label": "Leadership",
+    "leadership_heading": "Driven From\nThe Top.",
+    "leadership_sub": "Senior leadership with deep roots in Oman's construction sector — setting the standard for every project we deliver.",
+    "csr_label": "Responsibility",
+    "csr_heading": "Safety, Ethics &\nCommunity",
+    "csr_body": "Not a policy document — embedded in how every site is run, every worker treated, every contract managed.",
+    "team_label": "Our People",
+    "team_heading_pre": "",
+    "team_heading_post": "+ Directly Employed.",
+    "team_sub": "Civil engineers, MEP engineers, supervisors, and skilled tradespeople — employed directly, not agency-sourced.",
+    "equipment_label": "Plant & Equipment",
+    "equipment_heading": "Infrastructure-Grade Capacity"
+  },
+  "contact": {
+    "banner_title": "Begin the Conversation",
+    "banner_sub": "We respond within one business day. Serious enquiries only.",
+    "form_name": "Full Name",
+    "form_company": "Company",
+    "form_phone": "Phone Number",
+    "form_email": "Email Address",
+    "form_type": "Project Type",
+    "form_budget": "Estimated Budget (OMR)",
+    "form_message": "Project Details",
+    "form_submit": "Send Message →",
+    "form_sending": "Sending…",
+    "form_success": "Thank you — we'll be in touch within one business day.",
+    "info_address": "Address",
+    "info_phone": "Phone",
+    "info_email": "Email",
+    "info_hours": "Office Hours"
+  }
+}

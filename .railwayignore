@@ -1,0 +1,10 @@
+public/videos/hero-hq.mp4
+public/videos/hero-19mb.mp4.bak
+public/videos/hero-web.mp4.bak
+ffmpeg
+ffmpeg.zip
+out/
+.next/
+node_modules/
+public/images/extracted/
+public/videos/hero-original.mp4

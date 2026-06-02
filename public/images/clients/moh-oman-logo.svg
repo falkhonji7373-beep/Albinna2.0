@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72" fill="none">
+  <!-- Omani Khanjar silhouette (simplified) -->
+  <g transform="translate(18, 4)">
+    <!-- Blade -->
+    <path d="M17 8 C17 8 14 18 13 28 C12 36 13 42 17 44 C21 42 22 36 21 28 C20 18 17 8 17 8Z" fill="#2a6049"/>
+    <!-- Guard crosspiece -->
+    <rect x="10" y="26" width="14" height="3" rx="1.5" fill="#2a6049"/>
+    <!-- Handle -->
+    <path d="M14 29 L14 48 C14 50 16 52 17 52 C18 52 20 50 20 48 L20 29Z" fill="#2a6049"/>
+    <!-- Belt loop left -->
+    <path d="M5 30 C2 32 1 38 3 42 L8 40 C6 37 6 34 8 32Z" fill="#2a6049"/>
+    <!-- Belt loop right -->
+    <path d="M29 30 C32 32 33 38 31 42 L26 40 C28 37 28 34 26 32Z" fill="#2a6049"/>
+  </g>
+  <!-- Divider line -->
+  <line x1="58" y1="8" x2="58" y2="64" stroke="#2a6049" stroke-width="1" opacity="0.4"/>
+  <!-- Arabic text: وزارة الصحة -->
+  <text x="70" y="28" font-family="serif" font-size="13" font-weight="700" fill="#1a3328" letter-spacing="0.5">وزارة الصحة</text>
+  <!-- Arabic: سلطنة عُمان -->
+  <text x="70" y="46" font-family="serif" font-size="10" fill="#2a6049" letter-spacing="0.3">سلطنة عُمان</text>
+  <!-- English text -->
+  <text x="70" y="62" font-family="Arial, sans-serif" font-size="7.5" font-weight="600" fill="#1a3328" letter-spacing="1.2" text-anchor="start">MINISTRY OF HEALTH · OMAN</text>
+</svg>
