@@ -22,7 +22,7 @@ export function useReveal(className = 'reveal', threshold = 0.12) {
       ([entry]) => {
         if (entry.isIntersecting) {
           el.classList.add('in');
-          // Disconnect after triggering — each element only needs one reveal
+          // Disconnect after triggering, each element only needs one reveal
           observer.disconnect();
         }
       },

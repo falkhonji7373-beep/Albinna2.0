@@ -22,8 +22,8 @@ export async function generateMetadata({
     : 'Qualifications & Certifications | Al Binaa Construction Oman';
 
   const description = isRTL
-    ? 'معتمد وفق ISO 9001:2015. السجل التجاري 2693300. 28 عامًا من التسليم الموثق. مؤهلات واعتمادات شركة البناء للإنشاءات والصناعة.'
-    : 'ISO 9001:2015 certified. Commercial Registration 2693300. 28 years of verified delivery in Oman. Al Binaa Construction qualifications and credentials.';
+    ? 'معتمد وفق ISO 9001:2015. السجل التجاري 2693300. 30 عامًا من التسليم الموثق. مؤهلات واعتمادات شركة البناء للإنشاءات والصناعة.'
+    : 'ISO 9001:2015 certified. Commercial Registration 2693300. 30 years of verified delivery in Oman. Al Binaa Construction qualifications and credentials.';
 
   return {
     title: { absolute: title },

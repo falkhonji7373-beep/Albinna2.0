@@ -22,11 +22,11 @@ export const MEGA_MENUS = {
   projects: {
     img: IMGS.residential2,
     items: [
-      { title: 'Duqm City Hotel — Phase 1', desc: 'Hospitality · Duqm, Oman', href: '/projects', filter: 'Hospitality' },
+      { title: 'Duqm City Hotel, Phase 1', desc: 'Hospitality · Duqm, Oman', href: '/projects', filter: 'Hospitality' },
       { title: 'Rimal I & II Communities', desc: 'Residential · 40,000 sqm, Muscat', href: '/projects', filter: 'Residential' },
       { title: 'Al Khonji Commercial Building', desc: 'Commercial · Muscat', href: '/projects', filter: 'Commercial' },
       { title: 'Rusayl Industrial Warehouse', desc: 'Industrial · Rusayl', href: '/projects', filter: 'Industrial' },
     ],
-    cta: 'View All 20+ Projects',
+    cta: 'View All 200+ Projects',
   },
 };

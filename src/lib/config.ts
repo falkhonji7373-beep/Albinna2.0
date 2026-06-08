@@ -1,6 +1,6 @@
 // ─── Formspree Configuration ──────────────────────────────────────────────────
 // 1. Go to https://formspree.io and sign up (free)
-// 2. Create a new form — set the notification email to info@albinaa-om.com
+// 2. Create a new form, set the notification email to info@albinaa-om.com
 // 3. Copy your form ID (looks like: xpwzgkrb) and paste it below
 //
 // Both forms (Contact page + Quick Quote panel) can share the same Formspree

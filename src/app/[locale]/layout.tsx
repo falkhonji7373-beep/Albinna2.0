@@ -19,11 +19,11 @@ export function generateStaticParams() {
 
 export const metadata: Metadata = {
   title: {
-    default: 'General Contractor Muscat Oman | Civil, MEP & Finishing — Al Binaa Construction',
+    default: 'General Contractor Muscat Oman | Civil, MEP & Finishing, Al Binaa Construction',
     template: '%s | Al Binaa',
   },
   description:
-    "Al Binaa Construction & Industry SAOC — Oman's most trusted premium construction partner since 1997. Award-winning commercial, residential, hospitality & MEP projects across Muscat. ISO-certified. 20+ delivered projects. Request a consultation.",
+    "Al Binaa Construction & Industry SAOC, Oman's most trusted premium construction partner since 1997. Award-winning commercial, residential, hospitality & MEP projects across Muscat. ISO-certified. 200+ delivered projects. Request a consultation.",
   keywords:
     'Al Binaa Construction Oman, premium construction company Muscat, luxury construction Oman, commercial contractor Muscat, residential developer Oman, hospitality construction Oman, MEP contractor Muscat, SAOC construction company, top construction firm Oman, Al Khonji Group construction, شركة البناء للإنشاءات عمان, مقاول مسقط, شركة إنشاءات عمان, مشاريع سكنية عمان, مقاول تجاري مسقط, إنشاءات فاخرة عمان, مقاول MEP عمان, شركة بناء موثوقة عمان',
   authors: [{ name: 'Al Binaa Construction & Industry SAOC' }],
@@ -42,15 +42,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: `${SITE_URL}/`,
-    title: 'Al Binaa Construction & Industry SAOC — Premium Construction in Oman',
+    title: 'Al Binaa Construction & Industry SAOC, Premium Construction in Oman',
     description:
-      'Premium construction partner in Oman. 28+ years. 20+ landmark projects. Commercial, residential, hospitality & MEP. Request a consultation today.',
+      'Premium construction partner in Oman. 30+ years. 200+ landmark projects. Commercial, residential, hospitality & MEP. Request a consultation today.',
     images: [
       {
         url: `${SITE_URL}/images/rimal-1-exterior.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Al Binaa Construction — Rimal I Residential Complex, Bausher, Oman',
+        alt: 'Al Binaa Construction, Rimal I Residential Complex, Bausher, Oman',
       },
     ],
     locale: 'en_GB',
@@ -58,8 +58,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Al Binaa Construction & Industry SAOC — Muscat, Oman',
-    description: 'Premium construction partner in Oman. 28+ years of excellence. 20+ landmark projects delivered.',
+    title: 'Al Binaa Construction & Industry SAOC, Muscat, Oman',
+    description: 'Premium construction partner in Oman. 30+ years of excellence. 200+ landmark projects delivered.',
     images: [`${SITE_URL}/images/rimal-1-exterior.jpg`],
   },
   other: {
@@ -114,9 +114,10 @@ const jsonLd = {
         { '@type': 'City', name: 'Muscat' },
       ],
       sameAs: [
-        'https://www.instagram.com/albinaa_om/',
-        'https://www.facebook.com/albinaaom/',
-        'https://www.linkedin.com/company/al-binaa',
+        'https://www.facebook.com/albinaaom',
+        'https://www.instagram.com/albinaa_om',
+        'https://www.youtube.com/@albinaa_om',
+        'https://www.linkedin.com/company/albinaaom',
       ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
@@ -136,43 +137,6 @@ const jsonLd = {
       url: SITE_URL,
       name: 'Al Binaa Construction & Industry SAOC',
       publisher: { '@id': `${SITE_URL}/#org` },
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What construction services does Al Binaa offer in Oman?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Al Binaa Construction & Industry SAOC offers four core services: Structural & Civil Construction, MEP (Mechanical, Electrical & Plumbing) Systems, Architectural Design & Build, and Interior Finishing & Quality — serving residential, commercial, and hospitality sectors across Oman.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do I request a consultation or project quote from Al Binaa?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Click "Request a Consultation" on our website or submit the contact form. Our team responds within one business day to discuss your project requirements.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What notable projects has Al Binaa completed in Oman?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Landmark completed projects include Rimal I (242 residential units, Bausher), OFFICE 1991 (9-storey commercial tower, Al Khuwair), Al Wadi Complex (21 townhouses), The Office (80 commercial units), Sur Plaza Hotel, and Desert Nights Resort (18,000 sqm renovation in Wahiba Sands).',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How long has Al Binaa Construction been operating in Oman?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Al Binaa Construction & Industry SAOC has been operating in Oman for over 28 years, delivering 20+ projects across commercial, residential, and hospitality sectors since its founding in 1997.',
-          },
-        },
-      ],
     },
   ],
 };
@@ -207,7 +171,7 @@ export default async function LocaleLayout({
         <link rel="alternate" hrefLang="en" href={`${SITE_URL}/en`} />
         <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/ar`} />
         <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/en`} />
-        {/* ⚠️  jsonLd is STATIC only — never interpolate user input, URL params,
+        {/* ⚠️  jsonLd is STATIC only, never interpolate user input, URL params,
              or CMS content here without sanitising first (XSS vector). */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>

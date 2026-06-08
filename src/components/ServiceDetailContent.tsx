@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { PageBanner } from '@/components/PageBanner';
 import { useQuote } from '@/components/QuoteContext';
-import { SERVICES, COMPLETED_PROJECTS } from '@/lib/data';
+import { SERVICES, COMPLETED_PROJECTS, SERVICE_FAQ } from '@/lib/data';
 
 interface Props {
   slug: string;
@@ -35,7 +35,7 @@ export function ServiceDetailContent({ slug }: Props) {
   const desc     = isRTL ? service.descAr     : service.desc;
   const scope    = isRTL ? service.scopeAr    : service.scope;
 
-  // Related projects — filter by matching category
+  // Related projects, filter by matching category
   const categoryMap: Record<string, string> = {
     structure: 'Residential',
     mep: 'Commercial',
@@ -67,7 +67,7 @@ export function ServiceDetailContent({ slug }: Props) {
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '5rem', alignItems: 'start' }} className="service-detail-grid">
 
-            {/* Left — description + scope */}
+            {/* Left, description + scope */}
             <div>
               <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--red)', fontWeight: 600, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: 10, flexDirection: isRTL ? 'row-reverse' : 'row' }}>
                 <span style={{ display: 'inline-block', width: 28, height: 1.5, background: 'var(--red)' }} />
@@ -106,13 +106,13 @@ export function ServiceDetailContent({ slug }: Props) {
                 </div>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'var(--fg)', lineHeight: 1.8, margin: 0 }}>
                   {isRTL
-                    ? 'هذا القسم لا يعمل بمعزل عن غيره — بل ينسق مع الأقسام الأخرى في البناء تحت إدارة واحدة. عقد واحد يعني مسؤولية واحدة، ومعيار واحد للجودة، وجهة اتصال واحدة.'
-                    : 'This division does not work in isolation — it co-ordinates with Al Binaa\'s other divisions under single management. One contract means one accountability, one quality standard, one point of contact.'}
+                    ? 'هذا القسم لا يعمل بمعزل عن غيره، بل ينسق مع الأقسام الأخرى في البناء تحت إدارة واحدة. عقد واحد يعني مسؤولية واحدة، ومعيار واحد للجودة، وجهة اتصال واحدة.'
+                    : 'This division does not work in isolation, it co-ordinates with Al Binaa\'s other divisions under single management. One contract means one accountability, one quality standard, one point of contact.'}
                 </p>
               </div>
             </div>
 
-            {/* Right — sidebar */}
+            {/* Right, sidebar */}
             <aside style={{ position: 'sticky', top: '2rem' }}>
               <div style={{ border: '1px solid var(--border-color)', background: 'var(--card-bg)', marginBottom: '2rem' }}>
                 <div style={{ background: 'var(--red)', padding: '0.75rem 1.5rem' }}>
@@ -123,7 +123,7 @@ export function ServiceDetailContent({ slug }: Props) {
                 <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: 0, textAlign: isRTL ? 'right' : 'left' }}>
                   {[
                     { label: isRTL ? 'القسم' : 'Division', value: service.num },
-                    { label: isRTL ? 'التوظيف' : 'Staffing', value: isRTL ? 'مباشر — لا عمالة وكالات' : 'Direct — no agency labour' },
+                    { label: isRTL ? 'التوظيف' : 'Staffing', value: isRTL ? 'مباشر، لا عمالة وكالات' : 'Direct, no agency labour' },
                     { label: isRTL ? 'النموذج' : 'Model', value: isRTL ? 'تحت إدارة واحدة' : 'Single management' },
                     { label: isRTL ? 'التوافر' : 'Availability', value: isRTL ? 'كجزء من عقد متكامل أو مستقل' : 'As part of full contract or standalone' },
                   ].map(({ label, value }, i, arr) => (
@@ -160,6 +160,26 @@ export function ServiceDetailContent({ slug }: Props) {
               </div>
             </aside>
           </div>
+
+          {/* FAQ (AEO/GEO) */}
+          {SERVICE_FAQ[slug] && (
+            <div style={{ marginTop: '5rem', maxWidth: 820 }}>
+              <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--fg-muted)', fontWeight: 600, marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: 10, flexDirection: isRTL ? 'row-reverse' : 'row' }}>
+                <span style={{ display: 'inline-block', width: 28, height: 1.5, background: 'var(--red)' }} />
+                {isRTL ? 'أسئلة شائعة' : 'Common Questions'}
+              </div>
+              {(isRTL ? SERVICE_FAQ[slug].ar : SERVICE_FAQ[slug].en).map((item, i) => (
+                <div key={i} style={{ padding: '1.5rem 0', borderTop: '1px solid var(--border-color)', textAlign: isRTL ? 'right' : 'left' }}>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1rem,1.5vw,1.2rem)', fontWeight: 700, color: 'var(--fg)', margin: '0 0 0.6rem', lineHeight: 1.3 }}>
+                    {item.q}
+                  </h3>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'var(--fg-muted)', lineHeight: 1.8, margin: 0 }}>
+                    {item.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* Related Projects */}
           {related.length > 0 && (

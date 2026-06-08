@@ -66,10 +66,10 @@ export function HomeContent() {
   const featuredProjects = COMPLETED_PROJECTS.slice(0, 3);
 
   const stats = [
-    { n: 28,  suffix: '+', label: t('stats.years') },
-    { n: 20, suffix: '+', label: t('stats.projects')  },
+    { n: 30,  suffix: '+', label: t('stats.years') },
+    { n: 200, suffix: '+', label: t('stats.projects')  },
     { n: 3,   suffix: '',  label: t('stats.divisions')      },
-    { n: 600, suffix: '+', label: t('stats.professionals') },
+    { n: 1000, suffix: '+', label: t('stats.professionals') },
   ];
 
   const isRTL = locale === 'ar';
@@ -77,15 +77,15 @@ export function HomeContent() {
   const trustPillars = isRTL
     ? [
         { label: 'الجودة',     title: 'معتمد ISO',           sub: 'أنظمة إدارة الجودة وفق المعايير الدولية' },
-        { label: 'الإرث',      title: 'إرث يمتد 28+ عاماً', sub: 'سجل حافل منذ 1997، مشروعاً تلو الآخر' },
-        { label: 'التسليم',    title: 'تسليم شامل',           sub: 'من التصميم حتى التسليم — فريق واحد متكامل' },
+        { label: 'الإرث',      title: 'إرث يمتد 30+ عاماً', sub: 'سجل حافل منذ 1997، مشروعاً تلو الآخر' },
+        { label: 'التسليم',    title: 'تسليم شامل',           sub: 'من التصميم حتى التسليم، فريق واحد متكامل' },
         { label: 'الخبرة',     title: 'خبرة عمانية أولاً',   sub: 'معرفة محلية عميقة وعلاقات راسخة وإتقان تنظيمي' },
       ]
     : [
-        { label: 'Established', title: 'Since 1997',       sub: 'Twenty-eight years of continuous operation across Oman — no restructuring, no ownership change, no gap in delivery.' },
+        { label: 'Established', title: 'Since 1997',       sub: 'Thirty years of continuous operation across Oman, no restructuring, no ownership change, no gap in delivery.' },
         { label: 'Integrated',  title: 'One Contract',     sub: 'Structure, MEP, and Finishing executed in-house. One contract: one point of accountability, zero interface risk.' },
         { label: 'Certified',   title: 'ISO 9001:2015',    sub: 'Quality management systems independently audited since 2010. Certificate available on request.' },
-        { label: 'Capacity',    title: '600+ Personnel',   sub: 'Civil engineers, MEP engineers, supervisors, and skilled tradespeople — employed directly, not agency-sourced.' },
+        { label: 'Capacity',    title: '1,000+ Personnel', sub: 'Civil engineers, MEP engineers, supervisors, and skilled tradespeople, employed directly rather than sourced through agencies.' },
       ];
 
   const heroIn = (delay: number): React.CSSProperties => ({
@@ -98,10 +98,10 @@ export function HomeContent() {
   return (
     <main>
 
-      {/* ─────────── HERO — THE MASTHEAD ─────────── */}
+      {/* ─────────── HERO, THE MASTHEAD ─────────── */}
       <section style={{ position: 'relative', minHeight: '100dvh', overflow: 'hidden' }}>
 
-        {/* Full-bleed video — poster shows instantly before first frame */}
+        {/* Full-bleed video, poster shows instantly before first frame */}
         <video autoPlay muted loop playsInline poster="/images/structure-hero.jpg"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', background: '#000' }}>
           <source src="/videos/hero.mp4" type="video/mp4" />
@@ -115,7 +115,7 @@ export function HomeContent() {
           pointerEvents: 'none',
         }} />
 
-        {/* Masthead strip — bottom-anchored */}
+        {/* Masthead strip, bottom-anchored */}
         <div style={{
           position: 'absolute', bottom: 0, left: 0, right: 0,
           padding: 'clamp(2.5rem,4vw,4rem) clamp(2rem,5vw,5rem)',
@@ -125,7 +125,7 @@ export function HomeContent() {
           gap: '2rem',
           flexWrap: 'wrap',
         }}>
-          {/* Left — headline */}
+          {/* Left, headline */}
           <div style={{ ...heroIn(120) }}>
             <div style={{
               display: 'flex', alignItems: 'center', gap: 10,
@@ -142,11 +142,11 @@ export function HomeContent() {
                 {isRTL ? 'البناء للإنشاءات والصناعة · مسقط' : 'Al Binaa Construction & Industry · Muscat'}
               </span>
             </div>
-            {/* SEO H1 — keyword-rich, visually hidden */}
+            {/* SEO H1, keyword-rich, visually hidden */}
             <h1 className="sr-only">
               {isRTL
-                ? 'مقاول عام في مسقط، عُمان — هيكل إنشائي وأنظمة MEP وتشطيبات داخلية منذ 1997'
-                : 'General Contractor in Muscat, Oman — Civil, MEP & Interior Finishing Since 1997'}
+                ? 'مقاول عام في مسقط، عُمان، هيكل إنشائي وأنظمة MEP وتشطيبات داخلية منذ 1997'
+                : 'General Contractor in Muscat, Oman, Civil, MEP & Interior Finishing Since 1997'}
             </h1>
             {/* Visual display headline */}
             <p aria-hidden="true" style={{
@@ -166,7 +166,7 @@ export function HomeContent() {
             </p>
           </div>
 
-          {/* Right — trust badges + CTA */}
+          {/* Right, trust badges + CTA */}
           <div style={{
             display: 'flex', flexDirection: 'column',
             alignItems: isRTL ? 'flex-start' : 'flex-end',
@@ -194,31 +194,28 @@ export function HomeContent() {
         </div>
       </section>
 
-      {/* Stats strip — immediately below hero */}
-      <div ref={statsRef as React.RefObject<HTMLDivElement>}
-        style={{
-          background: 'rgba(14,11,9,0.96)',
-          display: 'grid', gridTemplateColumns: 'repeat(4,1fr)',
-          borderBottom: '1px solid rgba(255,255,255,0.06)',
-        }}>
-        {stats.map((s, i) => (
-          <div key={i} style={{
-            padding: 'clamp(1.1rem,1.8vw,1.5rem) 1rem',
-            textAlign: 'center',
-            borderInlineEnd: i < 3 ? '1px solid rgba(255,255,255,0.07)' : 'none',
-          }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.1rem,1.6vw,1.45rem)', fontWeight: 700, color: i === 1 ? 'var(--red)' : '#F5F0E8', lineHeight: 1, marginBottom: '0.3rem' }}>
-              <CountUp end={s.n} />{s.suffix}
-            </div>
-            <div style={{ fontFamily: 'var(--font-body)', fontSize: 10.5, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(245,240,232,0.65)', fontWeight: 500 }}>{s.label}</div>
-          </div>
-        ))}
-      </div>
-
-
-      {/* ─────────── TRUST PILLARS ─────────── */}
-      <section style={{ background: 'var(--section-bg)', padding: 'clamp(1.5rem,2.5vw,2rem) clamp(1.5rem,5vw,4rem)', borderBottom: '1px solid rgba(26,22,18,0.12)' }}>
+      {/* ─────────── PROOF BAND — stats + trust pillars merged into one section ─────────── */}
+      <section style={{ background: 'var(--section-bg)', padding: 'clamp(2rem,3.5vw,3rem) clamp(1.5rem,5vw,4rem)', borderBottom: '1px solid rgba(26,22,18,0.12)' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+
+          {/* Headline numbers */}
+          <div ref={statsRef as React.RefObject<HTMLDivElement>}
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', marginBottom: 'clamp(2rem,3.5vw,3rem)' }}
+            className="stats-grid">
+            {stats.map((s, i) => (
+              <div key={i} style={{
+                padding: '0 1.25rem',
+                textAlign: isRTL ? 'right' : 'left',
+                borderInlineStart: i > 0 ? '1px solid rgba(26,22,18,0.12)' : 'none',
+              }}>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.9rem,3vw,2.6rem)', fontWeight: 700, color: i === 1 ? 'var(--red)' : 'var(--fg)', lineHeight: 1, marginBottom: '0.4rem', paddingInlineStart: i > 0 ? '1.25rem' : 0 }}>
+                  <CountUp end={s.n} />{s.suffix}
+                </div>
+                <div style={{ fontFamily: 'var(--font-body)', fontSize: 10.5, letterSpacing: isRTL ? '0' : '0.12em', textTransform: isRTL ? 'none' : 'uppercase', color: 'var(--fg-muted)', fontWeight: 500, paddingInlineStart: i > 0 ? '1.25rem' : 0 }}>{s.label}</div>
+              </div>
+            ))}
+          </div>
+
           <div ref={trustRef as React.RefObject<HTMLDivElement>}
             style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '1px', background: 'rgba(26,22,18,0.18)' }}
             className="trust-grid">
@@ -235,7 +232,7 @@ export function HomeContent() {
       </section>
 
 
-      {/* ─────────── CLIENTS STRIP — marquee ─────────── */}
+      {/* ─────────── CLIENTS STRIP, marquee ─────────── */}
       <section style={{ background: 'var(--alt-bg)', padding: 'clamp(2rem,3.5vw,2.75rem) 0', borderBottom: '1px solid rgba(26,22,18,0.1)', overflow: 'hidden' }}>
         <div style={{ textAlign: 'center', fontFamily: 'var(--font-body)', fontSize: 9.5, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--fg-subtle)', marginBottom: '1.5rem', fontWeight: 600 }}>
           Trusted By
@@ -244,19 +241,19 @@ export function HomeContent() {
         <div style={{ position: 'relative' }}>
           <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 120, background: 'linear-gradient(to right, var(--alt-bg), transparent)', zIndex: 2, pointerEvents: 'none' }} />
           <div style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: 120, background: 'linear-gradient(to left, var(--alt-bg), transparent)', zIndex: 2, pointerEvents: 'none' }} />
-          {/* Track — duplicated for seamless loop */}
+          {/* Track, duplicated for seamless loop */}
           <div className="marquee-track" style={{ display: 'flex', alignItems: 'center', gap: '5rem', width: 'max-content', background: 'var(--alt-bg)' }}>
             {[
-              { src: '/images/clients/aqar-logo.png',           alt: 'AQAR — Al Khonji Real Estate',             multiply: false },
+              { src: '/images/clients/aqar-logo.png',           alt: 'AQAR, Al Khonji Real Estate',             multiply: false },
               { src: '/images/clients/oman-hotels-logo.svg',    alt: 'Oman Hotels',                              multiply: false },
               { src: '/images/clients/al-khonji-logo.svg',      alt: 'Al Khonji Group',                          multiply: false },
-              { src: '/images/clients/logo-ministry-en.png',    alt: 'Ministry of Health — Sultanate of Oman',   multiply: true  },
+              { src: '/images/clients/logo-ministry-en.png',    alt: 'Ministry of Health, Sultanate of Oman',   multiply: true  },
               { src: '/images/clients/images.png',              alt: 'Moosa Abdul Rahman Hassan & Co. LLC',      multiply: true  },
               // duplicate set for seamless loop
-              { src: '/images/clients/aqar-logo.png',           alt: 'AQAR — Al Khonji Real Estate',             multiply: false },
+              { src: '/images/clients/aqar-logo.png',           alt: 'AQAR, Al Khonji Real Estate',             multiply: false },
               { src: '/images/clients/oman-hotels-logo.svg',    alt: 'Oman Hotels',                              multiply: false },
               { src: '/images/clients/al-khonji-logo.svg',      alt: 'Al Khonji Group',                          multiply: false },
-              { src: '/images/clients/logo-ministry-en.png',    alt: 'Ministry of Health — Sultanate of Oman',   multiply: true  },
+              { src: '/images/clients/logo-ministry-en.png',    alt: 'Ministry of Health, Sultanate of Oman',   multiply: true  },
               { src: '/images/clients/images.png',              alt: 'Moosa Abdul Rahman Hassan & Co. LLC',      multiply: true  },
             ].map((logo, i) => (
               <img
@@ -363,14 +360,14 @@ export function HomeContent() {
             style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '2px', background: 'var(--border-color)' }}
             className="projects-grid">
 
-            {/* Hero card — spans full height on the left */}
+            {/* Hero card, spans full height on the left */}
             {featuredProjects[0] && (() => { const p = featuredProjects[0]; const i = 0; return (
               <article key={p.id} className="card-hover-wrap"
                 onMouseEnter={() => setHoveredCard(`proj-${i}`)}
                 onMouseLeave={() => setHoveredCard(null)}
                 style={{ background: 'var(--card-bg)', overflow: 'hidden', cursor: 'pointer', gridRow: '1 / 3', display: 'flex', flexDirection: 'column', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.7)' }}>
                 <div style={{ position: 'relative', flex: 1, minHeight: 420, overflow: 'hidden' }}>
-                  <img src={p.img} alt={`${p.title} — Al Binaa Construction`} className="card-img" loading="lazy"
+                  <img src={p.img} alt={`${p.title}, Al Binaa Construction`} className="card-img" loading="lazy"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.65s cubic-bezier(0.16,1,0.3,1)', transform: hoveredCard === `proj-${i}` ? 'scale(1.04)' : 'scale(1)' }} />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)', pointerEvents: 'none' }} />
                   <div style={{ position: 'absolute', top: '1.5rem', insetInlineStart: '1.5rem', background: 'var(--red)', color: '#fff', fontFamily: 'var(--font-body)', fontSize: 9, letterSpacing: isRTL ? '0' : '0.15em', textTransform: isRTL ? 'none' : 'uppercase', fontWeight: 600, padding: '4px 11px' }}>
@@ -393,7 +390,7 @@ export function HomeContent() {
                 onMouseLeave={() => setHoveredCard(null)}
                 style={{ background: 'var(--card-bg)', overflow: 'hidden', cursor: 'pointer' }}>
                 <div style={{ position: 'relative', height: 200, overflow: 'hidden' }}>
-                  <img src={p.img} alt={`${p.title} — Al Binaa Construction`} className="card-img" loading="lazy"
+                  <img src={p.img} alt={`${p.title}, Al Binaa Construction`} className="card-img" loading="lazy"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.65s cubic-bezier(0.16,1,0.3,1)', transform: hoveredCard === `proj-${i}` ? 'scale(1.05)' : 'scale(1)' }} />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.58) 0%, transparent 55%)', pointerEvents: 'none' }} />
                   <div style={{ position: 'absolute', top: '1rem', insetInlineStart: '1rem', background: 'var(--red)', color: '#fff', fontFamily: 'var(--font-body)', fontSize: 8.5, letterSpacing: isRTL ? '0' : '0.15em', textTransform: isRTL ? 'none' : 'uppercase', fontWeight: 600, padding: '3px 9px' }}>
@@ -432,13 +429,13 @@ export function HomeContent() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '1px', background: 'rgba(26,22,18,0.12)' }} className="stats-grid">
             {(isRTL ? [
               { n: '04', title: 'التسليم', desc: 'فحص الأعمال وإصلاح العيوب والتفتيش النهائي للجودة قبل تسليم المفاتيح.' },
-              { n: '03', title: 'التنفيذ', desc: 'أقسامنا الثلاثة — الإنشاء وMEP والتشطيبات — تحت إدارة موقع واحدة.' },
+              { n: '03', title: 'التنفيذ', desc: 'أقسامنا الثلاثة، الإنشاء وMEP والتشطيبات، تحت إدارة موقع واحدة.' },
               { n: '02', title: 'التصميم والتصاريح', desc: 'مهندسونا يُنتجون مخططات جاهزة للتصريح ويتولون تقديم الموافقات الرسمية.' },
               { n: '01', title: 'الاستشارة الأولية', desc: 'نزور الموقع ونقيّم النطاق ونضع خطة العمل قبل رسم أي مخطط.' },
             ] : [
               { n: '01', title: 'Brief & Site Assessment', desc: 'We visit the site, assess scope, and align on requirements before a drawing is made.' },
               { n: '02', title: 'Design & Permits',        desc: 'Our in-house engineers produce permit-ready drawings and manage all authority submissions.' },
-              { n: '03', title: 'Build',                   desc: 'Our three divisions — Structure, MEP, and Finishing — work under one site team.' },
+              { n: '03', title: 'Build',                   desc: 'Our three divisions, Structure, MEP, and Finishing, work under one site team.' },
               { n: '04', title: 'Handover',                desc: 'Snagging, commissioning, and final quality inspection before keys are handed over.' },
             ]).map((step, i) => (
               <div key={step.n} style={{ background: 'var(--section-bg)', padding: 'clamp(1.75rem,2.5vw,2.5rem)', textAlign: isRTL ? 'right' : 'left' }}>

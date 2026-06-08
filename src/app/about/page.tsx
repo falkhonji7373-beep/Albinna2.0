@@ -22,17 +22,17 @@ const LEADERSHIP = [
     name: '',
     title: 'General Manager',
     dept: 'Operations & Delivery',
-    resp: 'Day-to-day oversight of all active projects — engineering, commercial, safety, and on-time handover.',
+    resp: 'Day-to-day oversight of all active projects, engineering, commercial, safety, and on-time handover.',
   },
 ];
 
 const CSR_PILLARS = [
-  { title: 'Zero Harm', desc: 'Every site. Every day. Daily toolbox talks, mandatory PPE — no exceptions.' },
+  { title: 'Zero Harm', desc: 'Every site. Every day. Daily toolbox talks, mandatory PPE, no exceptions.' },
   { title: 'Ethical Conduct', desc: 'Transparent contracts, prompt payment, honest reporting to all stakeholders.' },
   { title: 'Omanisation', desc: 'Omani engineers and managers. Continuous investment in local talent.' },
-  { title: 'Worker Welfare', desc: 'Compliant accommodation, fair wages — exceeding Omani Labour Law.' },
+  { title: 'Worker Welfare', desc: 'Compliant accommodation, fair wages, exceeding Omani Labour Law.' },
   { title: 'Environment', desc: 'Waste segregation, dust control, reduced carbon footprint on every site.' },
-  { title: 'Vision 2040', desc: 'Local procurement and employment — contributing to Oman\'s future.' },
+  { title: 'Vision 2040', desc: 'Local procurement and employment, contributing to Oman\'s future.' },
 ];
 
 const labelStyle: React.CSSProperties = {
@@ -42,13 +42,12 @@ const labelStyle: React.CSSProperties = {
 
 export default function AboutPage() {
   const { openQuote } = useQuote();
-  const totalManpower = MANPOWER.reduce((a, m) => a + m.qty, 0);
 
   return (
     <main>
       <PageBanner
         title="About Al Binaa"
-        subtitle="Thirty years. 20+ projects. Built in Oman — for Oman."
+        subtitle="Thirty years. 200+ projects. Built in Oman, for Oman."
         img={IMGS.commercial1}
       />
 
@@ -59,10 +58,10 @@ export default function AboutPage() {
             <SectionLabel>Our Story</SectionLabel>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: 700, color: 'var(--fg)', margin: '0 0 1.75rem', lineHeight: 1.05 }}>Built in Oman.<br />Built for Oman.</h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, color: 'var(--fg-muted)', lineHeight: 1.85, marginBottom: '1.5rem' }}>
-              Founded in 1997 under the Al Khonji Group. What began as civil construction has grown into Muscat's most recognised full-service contractor — 20+ landmark projects across residential, commercial, and hospitality.
+              Founded in 1997 under the Al Khonji Group. What began as civil construction has grown into Muscat's most recognised full-service contractor, 200+ landmark projects across residential, commercial, and hospitality.
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, color: 'var(--fg-muted)', lineHeight: 1.85, marginBottom: '2.5rem' }}>
-              Every building carries our name. That's the standard — precision, safety, and trust, earned project by project over three decades.
+              Every building carries our name. That's the standard, precision, safety, and trust, earned project by project over three decades.
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '1.5rem', background: 'var(--alt-bg)', borderLeft: '3px solid var(--red)', marginBottom: '2.5rem' }}>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.5rem', fontWeight: 700, color: 'var(--red)', lineHeight: 1 }}>1997</div>
@@ -77,18 +76,18 @@ export default function AboutPage() {
             </button>
           </div>
 
-          {/* Right — stacked image pair */}
+          {/* Right, stacked image pair */}
           <div style={{ display: 'grid', gridTemplateRows: '1fr auto', gap: '1rem' }}>
             <div style={{ position: 'relative' }}>
-              <img src={IMGS.building1} alt="OFFICE 1991 — Muscat skyline" style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block' }} />
+              <img src={IMGS.building1} alt="OFFICE 1991, Muscat skyline" style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block' }} />
               <div style={{ position: 'absolute', bottom: 0, left: 0, background: 'var(--red)', padding: '1.5rem 2rem' }}>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.8rem', fontWeight: 700, color: '#fff', lineHeight: 1 }}>20+</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.8rem', fontWeight: 700, color: '#fff', lineHeight: 1 }}>200+</div>
                 <div style={{ fontFamily: 'var(--font-body)', fontSize: 10.5, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.8)', marginTop: 4 }}>Projects Delivered</div>
               </div>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-              <img src="/images/rimal-1-aerial.jpg" alt="Rimal I — 242-unit residential complex" style={{ width: '100%', height: 180, objectFit: 'cover', display: 'block' }} />
-              <img src="/images/al-wadi-complex-aerial.jpg" alt="Al Wadi Complex — Muscat" style={{ width: '100%', height: 180, objectFit: 'cover', display: 'block' }} />
+              <img src="/images/rimal-1-aerial.jpg" alt="Rimal I, 242-unit residential complex" style={{ width: '100%', height: 180, objectFit: 'cover', display: 'block' }} />
+              <img src="/images/al-wadi-complex-aerial.jpg" alt="Al Wadi Complex, Muscat" style={{ width: '100%', height: 180, objectFit: 'cover', display: 'block' }} />
             </div>
           </div>
         </div>
@@ -101,14 +100,14 @@ export default function AboutPage() {
             <div style={labelStyle}>Mission</div>
             <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: 700, color: 'var(--fg)', margin: '0 0 1.25rem', lineHeight: 1.1 }}>Excellence. Every Project.</h3>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'var(--fg-muted)', lineHeight: 1.8, margin: 0 }}>
-              World-class construction — driven by quality, precision, and operational excellence. Every handover creates lasting value for Oman.
+              World-class construction, driven by quality, precision, and operational excellence. Every handover creates lasting value for Oman.
             </p>
           </div>
           <div style={{ padding: '2.5rem', borderTop: '3px solid var(--fg-muted)' }}>
             <div style={{ ...labelStyle, color: 'var(--fg-muted)' }}>Vision</div>
             <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: 700, color: 'var(--fg)', margin: '0 0 1.25rem', lineHeight: 1.1 }}>Oman's Benchmark Contractor.</h3>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'var(--fg-muted)', lineHeight: 1.8, margin: 0 }}>
-              The most trusted name in Oman construction — recognised for reliability, innovation, and the highest standards of technical delivery.
+              The most trusted name in Oman construction, recognised for reliability, innovation, and the highest standards of technical delivery.
             </p>
           </div>
         </div>
@@ -122,9 +121,9 @@ export default function AboutPage() {
               <SectionLabel>Leadership</SectionLabel>
               <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: 700, color: 'var(--fg)', margin: '0 0 1.25rem', lineHeight: 1.05 }}>Driven From<br />The Top.</h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'var(--fg-muted)', lineHeight: 1.8, marginBottom: '2rem' }}>
-                Senior leadership with deep roots in Oman's construction sector — setting the standard for every project we deliver.
+                Senior leadership with deep roots in Oman's construction sector, setting the standard for every project we deliver.
               </p>
-              <img src="/images/office-1991.jpg" alt="OFFICE 1991 — Al Binaa flagship commercial project" style={{ width: '100%', height: 280, objectFit: 'cover', display: 'block' }} />
+              <img src="/images/office-1991.jpg" alt="OFFICE 1991, Al Binaa flagship commercial project" style={{ width: '100%', height: 280, objectFit: 'cover', display: 'block' }} />
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.5px', background: 'var(--border-color)' }}>
               {LEADERSHIP.map((l, i) => (
@@ -151,11 +150,11 @@ export default function AboutPage() {
               <SectionLabel>Responsibility</SectionLabel>
               <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem,3.5vw,2.8rem)', fontWeight: 700, color: 'var(--fg)', margin: '0 0 1.25rem', lineHeight: 1.05 }}>Safety, Ethics &<br />Community</h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'var(--fg-muted)', lineHeight: 1.8, marginBottom: '2rem' }}>
-                Not a policy document — embedded in how every site is run, every worker treated, every contract managed.
+                Not a policy document, embedded in how every site is run, every worker treated, every contract managed.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
                 {[
-                  { n: 'Zero Harm', label: 'Safety target — every site, every day' },
+                  { n: 'Zero Harm', label: 'Safety target, every site, every day' },
                   { n: 'ISO', label: 'Certified quality management' },
                   { n: '100%', label: 'OSHA & Oman Labour Law compliance' },
                 ].map(item => (
@@ -187,8 +186,8 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }} className="about-grid">
             <div>
               <SectionLabel>Our Team</SectionLabel>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem,3.5vw,2.8rem)', fontWeight: 700, color: 'var(--fg)', margin: '0 0 1.25rem', lineHeight: 1.05 }}>{totalManpower}+<br />Professionals.</h2>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'var(--fg-muted)', lineHeight: 1.8, marginBottom: '2rem' }}>Engineers, supervisors, and skilled trades — deployed on every Al Binaa site across Oman.</p>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem,3.5vw,2.8rem)', fontWeight: 700, color: 'var(--fg)', margin: '0 0 1.25rem', lineHeight: 1.05 }}>1,000+<br />Professionals.</h2>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'var(--fg-muted)', lineHeight: 1.8, marginBottom: '2rem' }}>Engineers, supervisors, and skilled trades, deployed on every Al Binaa site across Oman.</p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                 {[
                   { n: '25', label: 'Engineers' },

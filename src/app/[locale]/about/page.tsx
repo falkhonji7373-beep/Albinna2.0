@@ -12,11 +12,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const isRTL = locale === 'ar';
   return {
     title: isRTL
-      ? 'من نحن | البناء للإنشاءات والصناعة — تأسست 1997 مسقط عُمان'
-      : 'About Al Binaa — Construction Company, Est. 1997',
+      ? 'من نحن | البناء للإنشاءات والصناعة | تأسست 1997 مسقط عُمان'
+      : 'About Al Binaa | Construction Company, Est. 1997',
     description: isRTL
-      ? 'تعرّف على شركة البناء للإنشاءات والصناعة ش.م.ع.م — تأسست عام 1997 تحت مجموعة الخنجي. أكثر من 28 عاماً من التسليم المتواصل في عُمان. 600+ متخصص. معتمد ISO 9001:2015.'
-      : 'Al Binaa Construction & Industry SAOC — founded 1997 under Al Khonji Group. 28+ years of uninterrupted delivery in Oman. 600+ in-house professionals. ISO 9001:2015 certified.',
+      ? 'شركة البناء للإنشاءات والصناعة ش.م.ع.م، تأسست 1997 تحت مجموعة الخنجي. 30+ عاماً من التسليم في عُمان. 1,000+ متخصص. معتمد ISO 9001:2015.'
+      : 'Al Binaa Construction & Industry SAOC, founded 1997 under Al Khonji Group. 30+ years of delivery in Oman, 1,000+ professionals, ISO 9001:2015 certified.',
     alternates: {
       canonical: `${SITE_URL}/${locale}/about`,
       languages: { en: `${SITE_URL}/en/about`, ar: `${SITE_URL}/ar/about`, 'x-default': `${SITE_URL}/en/about` },
@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: isRTL ? 'من نحن | البناء للإنشاءات' : 'About Al Binaa Construction',
       description: isRTL
-        ? 'تأسست 1997. 28+ عاماً. 600+ متخصص. معتمد ISO. مقاول مسقط الموثوق.'
-        : 'Est. 1997. 28+ years. 600+ professionals. ISO certified. Muscat, Oman.',
+        ? 'تأسست 1997. 30+ عاماً. 1,000+ متخصص. معتمد ISO. مقاول مسقط الموثوق.'
+        : 'Est. 1997. 30+ years. 1,000+ professionals. ISO certified. Muscat, Oman.',
       locale: isRTL ? 'ar_OM' : 'en_GB',
     },
   };

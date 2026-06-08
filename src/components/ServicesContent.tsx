@@ -31,15 +31,15 @@ export function ServicesContent() {
 
   const WHY_ITEMS = isRTL
     ? [
-        { n: '20+', label: 'مشروع مُسلَّم',    desc: 'مشاريع سكنية وتجارية وضيافة وتجديد عبر السلطنة.' },
-        { n: '3',    label: 'أقسام داخلية',    desc: 'الهيكل الإنشائي وأنظمة MEP والتشطيبات — منسقة بالكامل تحت فريق واحد.' },
-        { n: '600+', label: 'عضو في الفريق',    desc: 'مهندسون ومشرفون وحرفيون مهرة ودعم لوجستي في كل مشروع.' },
+        { n: '200+', label: 'مشروع مُسلَّم',    desc: 'مشاريع سكنية وتجارية وضيافة وصحية وصناعية وتجديد عبر السلطنة.' },
+        { n: '3',    label: 'أقسام داخلية',    desc: 'الهيكل الإنشائي وأنظمة MEP والتشطيبات، منسقة بالكامل تحت فريق واحد.' },
+        { n: '1,000+', label: 'عضو في الفريق',    desc: 'مهندسون ومشرفون وحرفيون مهرة ودعم لوجستي في كل مشروع.' },
         { n: '100%', label: 'امتثال عُماني',    desc: 'جميع الأعمال تلتزم بمعايير البلدية وOSHA كحد أدنى.' },
       ]
     : [
-        { n: '20+', label: 'Projects Delivered',  desc: 'Residential, commercial, hospitality, and renovation projects across the Sultanate.' },
-        { n: '3',    label: 'In-house Divisions',   desc: 'Structure, MEP, and Finishing — fully co-ordinated under one team.' },
-        { n: '600+', label: 'Team Members',          desc: 'Engineers, supervisors, skilled tradespeople and logistical support on every project.' },
+        { n: '200+', label: 'Projects Delivered',  desc: 'Residential, commercial, hospitality, health, industrial, and renovation projects across the Sultanate.' },
+        { n: '3',    label: 'In-house Divisions',   desc: 'Structure, MEP, and Finishing, fully co-ordinated under one team.' },
+        { n: '1,000+', label: 'Directly Employed',   desc: 'Engineers, supervisors, skilled tradespeople and logistical support on every project.' },
         { n: '100%', label: 'Oman Compliant',        desc: 'All works adhere to Municipality, MONE, and OSHA standards as a baseline.' },
       ];
 
@@ -48,10 +48,21 @@ export function ServicesContent() {
       <PageBanner
         title={isRTL ? 'قدراتنا' : 'Our Capabilities'}
         subtitle={isRTL
-          ? 'ثلاثة تخصصات — عقد واحد. لا واجهات بين مقاولين، ولا فجوات في المساءلة.'
-          : 'Three disciplines. One contract. No interfaces between contractors — and no gaps in accountability.'}
+          ? 'ثلاثة تخصصات. عقد واحد. لا واجهات بين مقاولين، ولا فجوات في المساءلة.'
+          : 'Three disciplines. One contract. No interfaces between contractors, no gaps in accountability.'}
         img={IMGS.commercial1}
       />
+
+      {/* Answer-first lead (AEO) */}
+      <section style={{ background: 'var(--section-bg)', padding: 'clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem) 0' }}>
+        <div style={{ maxWidth: 920, margin: '0 auto' }}>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(1.05rem,1.6vw,1.3rem)', color: 'var(--fg)', lineHeight: 1.7, margin: 0, textAlign: isRTL ? 'right' : 'left', fontWeight: 400 }}>
+            {isRTL
+              ? 'شركة البناء مقاول عام يعمل بنظام العقد الواحد في مسقط، عُمان، ينفّذ الهيكل الإنشائي وأنظمة MEP والتشطيبات الداخلية بفريق داخلي تحت إدارة واحدة. ثلاثة تخصصات وعقد واحد ومسؤولية واحدة.'
+              : 'Al Binaa is a single-contract general contractor in Muscat, Oman that delivers structural, MEP, and interior finishing with one in-house team under one management. Three disciplines, one contract, one point of accountability.'}
+          </p>
+        </div>
+      </section>
 
       {/* ── ACCORDION ── */}
       <section style={{ background: 'var(--section-bg)', padding: 'clamp(4rem,8vw,8rem) clamp(1.5rem,5vw,4rem)' }}>
@@ -68,7 +79,7 @@ export function ServicesContent() {
                 <span style={{ color: 'var(--red)', fontSize: '1.4rem', transition: 'transform 0.3s', transform: open === i ? 'rotate(45deg)' : 'none', lineHeight: 1, flexShrink: 0 }}>+</span>
               </button>
 
-              {/* Animated accordion content — always mounted, height animated */}
+              {/* Animated accordion content, always mounted, height animated */}
               <div style={{
                 maxHeight: open === i ? '4000px' : '0',
                 opacity: open === i ? 1 : 0,
@@ -147,7 +158,7 @@ export function ServicesContent() {
               {isRTL ? 'لديك مشروع في ذهنك؟' : 'Have a project in mind?'}
             </div>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--fg-muted)', margin: 0 }}>
-              {isRTL ? 'أخبرنا عنه — نرد خلال يوم عمل واحد.' : 'Tell us about it — we respond within one business day.'}
+              {isRTL ? 'أخبرنا عنه، نرد خلال 48 ساعة.' : 'Tell us about it, we respond within 48 hours.'}
             </p>
           </div>
           <button onClick={openQuote} style={{

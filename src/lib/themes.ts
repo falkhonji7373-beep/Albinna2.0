@@ -121,10 +121,13 @@ export const THEMES: Record<string, Record<string, string>> = {
   },
 };
 
+// Single brand red, every accent option resolves to the exact same shade
+// so reds never diverge across the site regardless of theme tweaks.
+const BRAND_RED = { '--red': '#f5141f', '--red-light': '#ff3d47' };
 export const ACCENT_REDS: Record<string, Record<string, string>> = {
-  deep:   { '--red': '#c8101a', '--red-light': '#e01520' },
-  bright: { '--red': '#f5141f', '--red-light': '#ff3d47' },
-  muted:  { '--red': '#d41018', '--red-light': '#e82030' },
+  deep:   { ...BRAND_RED },
+  bright: { ...BRAND_RED },
+  muted:  { ...BRAND_RED },
 };
 
 export type ThemeKey = keyof typeof THEMES;

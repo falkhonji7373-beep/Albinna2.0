@@ -20,7 +20,7 @@ export function CountUp({ end, suffix = '', duration = 1800, delay = 0 }: CountU
   const hasRun = useRef(false);
 
   useEffect(() => {
-    // Respect prefers-reduced-motion — show final value immediately, no counting
+    // Respect prefers-reduced-motion, show final value immediately, no counting
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reducedMotion) {
       setCount(end);

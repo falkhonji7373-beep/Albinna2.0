@@ -9,8 +9,8 @@ import { useQuote } from '@/components/QuoteContext';
 import { IMGS, COMPLETED_PROJECTS, ONGOING_PROJECTS } from '@/lib/data';
 
 type Tab      = 'completed' | 'ongoing';
-type Category = 'All' | 'Residential' | 'Private Villas' | 'Commercial' | 'Hospitality';
-const CATEGORIES: Category[] = ['All', 'Residential', 'Private Villas', 'Commercial', 'Hospitality'];
+type Category = 'All' | 'Residential' | 'Private Villas' | 'Commercial' | 'Hospitality' | 'Industrial' | 'Health';
+const CATEGORIES: Category[] = ['All', 'Residential', 'Private Villas', 'Commercial', 'Hospitality', 'Industrial', 'Health'];
 
 export function ProjectsContent() {
   const { openQuote } = useQuote();
@@ -50,8 +50,8 @@ export function ProjectsContent() {
   const visible  = cat === 'All' ? projects : projects.filter(p => p.category === cat);
 
   const CAT_LABELS: Record<Category, string> = isRTL
-    ? { All: 'الكل', Residential: 'سكني', 'Private Villas': 'فلل خاصة', Commercial: 'تجاري', Hospitality: 'ضيافة' }
-    : { All: 'All', Residential: 'Residential', 'Private Villas': 'Private Villas', Commercial: 'Commercial', Hospitality: 'Hospitality' };
+    ? { All: 'الكل', Residential: 'سكني', 'Private Villas': 'فلل خاصة', Commercial: 'تجاري', Hospitality: 'ضيافة', Industrial: 'صناعي', Health: 'صحي' }
+    : { All: 'All', Residential: 'Residential', 'Private Villas': 'Private Villas', Commercial: 'Commercial', Hospitality: 'Hospitality', Industrial: 'Industrial', Health: 'Health' };
 
   return (
     <main>
@@ -63,9 +63,9 @@ export function ProjectsContent() {
       <section style={{ background: 'var(--section-bg)', padding: 'clamp(4rem,8vw,8rem) clamp(1.5rem,5vw,4rem)' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
 
-          {/* Animated clip-path tab selector (AnimatedTabs pattern — no external libs) */}
+          {/* Animated clip-path tab selector (AnimatedTabs pattern, no external libs) */}
           <div style={{ position: 'relative', display: 'inline-flex', marginBottom: '2.5rem', flexDirection: isRTL ? 'row-reverse' : 'row' }} ref={tabContainerRef}>
-            {/* Active overlay layer — clips to show only the active tab in red */}
+            {/* Active overlay layer, clips to show only the active tab in red */}
             <div aria-hidden="true" style={{
               position: 'absolute', inset: 0,
               background: 'var(--red)',
@@ -86,8 +86,8 @@ export function ProjectsContent() {
                   userSelect: 'none',
                 }}>
                   {isRTL
-                    ? (t === 'completed' ? `مكتملة (${COMPLETED_PROJECTS.length})` : `جارية (${ONGOING_PROJECTS.length})`)
-                    : (t === 'completed' ? `Completed (${COMPLETED_PROJECTS.length})` : `Ongoing (${ONGOING_PROJECTS.length})`)}
+                    ? (t === 'completed' ? `مكتملة (200+)` : `جارية (11)`)
+                    : (t === 'completed' ? `Completed (200+)` : `Ongoing (11)`)}
                 </div>
               ))}
             </div>
@@ -107,8 +107,8 @@ export function ProjectsContent() {
                   fontWeight: 600, padding: '12px 28px', whiteSpace: 'nowrap',
                 }}>
                 {isRTL
-                  ? (t === 'completed' ? `مكتملة (${COMPLETED_PROJECTS.length})` : `جارية (${ONGOING_PROJECTS.length})`)
-                  : (t === 'completed' ? `Completed (${COMPLETED_PROJECTS.length})` : `Ongoing (${ONGOING_PROJECTS.length})`)}
+                  ? (t === 'completed' ? `مكتملة (200+)` : `جارية (11)`)
+                  : (t === 'completed' ? `Completed (200+)` : `Ongoing (11)`)}
               </button>
             ))}
           </div>
@@ -159,13 +159,17 @@ export function ProjectsContent() {
                 <article key={p.id}
                   onMouseEnter={() => setHovered(p.id)}
                   onMouseLeave={() => setHovered(null)}
-                  style={{ background: 'var(--card-bg)', overflow: 'hidden', position: 'relative', cursor: tab === 'completed' ? 'pointer' : 'default' }}>
+                  style={{ background: 'var(--card-bg)', overflow: 'hidden', position: 'relative', cursor: tab === 'completed' ? 'pointer' : 'default',
+                    transition: 'transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s ease',
+                    transform: hovered === p.id ? 'translateY(-3px)' : 'translateY(0)',
+                    boxShadow: hovered === p.id ? '0 18px 38px -16px rgba(0,0,0,0.22)' : '0 0 0 rgba(0,0,0,0)',
+                  }}>
                   {tab === 'completed' && (
                     <Link href={`/${locale}/projects/${p.id}`} aria-label={p.title}
                       style={{ position: 'absolute', inset: 0, zIndex: 1 }} />
                   )}
-                  <div style={{ position: 'relative', height: 270, overflow: 'hidden' }}>
-                    <img src={p.img} alt={p.title}
+                  <div style={{ position: 'relative', height: 270, overflow: 'hidden', background: 'var(--alt-bg)' }}>
+                    <img src={p.img} alt={p.title} className="img-fade-in"
                       style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.65s', transform: hovered === p.id ? 'scale(1.06)' : 'scale(1)',
                         filter: tab === 'ongoing' ? 'brightness(0.78) saturate(0.45) contrast(1.08) hue-rotate(195deg)' : 'none',
                       }} />

@@ -28,7 +28,7 @@ function ServicesInner() {
     <main>
       <PageBanner
         title="Our Services"
-        subtitle="Structural engineering, MEP systems, and premium interior finishing — all under one roof."
+        subtitle="Structural engineering, MEP systems, and premium interior finishing, all under one roof."
         img={IMGS.commercial1}
       />
 
@@ -88,9 +88,9 @@ function ServicesInner() {
           <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: 700, color: 'var(--fg)', margin: '0 0 3rem', lineHeight: 1.05, maxWidth: '20ch' }}>Trusted by Oman's Leading Developers</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
             {[
-              { n: '20+', label: 'Projects Delivered', desc: 'Residential, commercial, hospitality, and renovation projects across the Sultanate.' },
-              { n: '3',    label: 'In-house Divisions', desc: 'Structure, MEP, and Finishing — fully co-ordinated under one team.' },
-              { n: '600+', label: 'Team Members',       desc: 'Engineers, supervisors, skilled tradespeople and logistical support on every project.' },
+              { n: '200+', label: 'Projects Delivered', desc: 'Residential, commercial, hospitality, and renovation projects across the Sultanate.' },
+              { n: '3',    label: 'In-house Divisions', desc: 'Structure, MEP, and Finishing, fully co-ordinated under one team.' },
+              { n: '1,000+', label: 'Team Members',       desc: 'Engineers, supervisors, skilled tradespeople and logistical support on every project.' },
               { n: '100%', label: 'Oman Compliant',     desc: 'All works adhere to Municipality, MONE, and OSHA standards as a baseline.' },
             ].map((item, i) => (
               <div key={i} style={{ padding: '2rem', borderTop: '3px solid var(--red)' }}>
@@ -115,7 +115,7 @@ function CtaBand({ openQuote }: { openQuote: () => void }) {
       <div style={{ maxWidth: 1400, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
         <div>
           <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.5rem,3vw,2.2rem)', fontWeight: 700, color: 'var(--fg)', marginBottom: '0.5rem' }}>Have a project in mind?</div>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--fg-muted)', margin: 0 }}>Tell us about it — we respond within one business day.</p>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--fg-muted)', margin: 0 }}>Tell us about it, we respond within 48 hours.</p>
         </div>
         <button onClick={openQuote} style={{
           background: 'var(--red)', color: '#fff', border: 'none', cursor: 'pointer',

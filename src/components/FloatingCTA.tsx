@@ -12,7 +12,7 @@ export function FloatingCTA() {
   const pathname = usePathname();
   const [visible, setVisible] = useState(false);
 
-  // Hide on contact page — user is already on the enquiry form
+  // Hide on contact page, user is already on the enquiry form
   const isContactPage = pathname?.includes('/contact');
 
   useEffect(() => {

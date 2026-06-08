@@ -3,15 +3,15 @@ const CDN = 'https://demo-al-binaa-v3-production.up.railway.app/images';
 const LOCAL = '/images';
 
 export const IMGS = {
-  // ── Hero & general — real Al Binaa projects in Muscat ──
+  // ── Hero & general, real Al Binaa projects in Muscat ──
   hero:         `${LOCAL}/office-1991-night.jpg`,   // OFFICE 1991 tower lit at night
-  commercial1:  `${LOCAL}/office-1991.jpg`,          // OFFICE 1991 daytime — structure
-  commercial2:  `${LOCAL}/the-office-exterior.jpg`,  // The Office — Al Ghubrah
-  residential1: `${LOCAL}/office-1991.jpg`,           // OFFICE 1991 — glass & metalwork bespoke finishing detail
-  residential2: `${LOCAL}/rimal-1-facade.jpg`,       // Rimal I façade — Bausher
-  industrial1:  `${LOCAL}/structure-hero.jpg`,        // Construction cranes at golden hour — structure hero
-  mepSystems:   `${LOCAL}/mep-systems.png`,           // MEP piping systems — green, grey & orange pipes
-  building1:    `${LOCAL}/office-1991-render.jpg`,   // OFFICE 1991 render — Muscat skyline, Grand Mosque backdrop
+  commercial1:  `${LOCAL}/office-1991.jpg`,          // OFFICE 1991 daytime, structure
+  commercial2:  `${LOCAL}/the-office-exterior.jpg`,  // The Office, Al Ghubrah
+  residential1: `${LOCAL}/office-1991.jpg`,           // OFFICE 1991, glass & metalwork bespoke finishing detail
+  residential2: `${LOCAL}/rimal-1-facade.jpg`,       // Rimal I façade, Bausher
+  industrial1:  `${LOCAL}/structure-hero.jpg`,        // Construction cranes at golden hour, structure hero
+  mepSystems:   `${LOCAL}/mep-systems.png`,           // MEP piping systems, green, grey & orange pipes
+  building1:    `${LOCAL}/office-1991-render.jpg`,   // OFFICE 1991 render, Muscat skyline, Grand Mosque backdrop
   building2:    `${LOCAL}/rimal-1-exterior.jpg`,     // Rimal I street-level exterior
 
   // ── Completed project photos (from company profile) ──
@@ -53,8 +53,8 @@ export const COMPLETED_PROJECTS = [
     id: 'rimal-1',
     title: 'Rimal I',
     subtitle: 'Residential Complex',
-    client: 'AQAR — Al Khonji Real Estate',
-    clientAr: 'عقار — الخنجي للعقارات',
+    client: 'AQAR, Al Khonji Real Estate',
+    clientAr: 'عقار، الخنجي للعقارات',
     location: 'Bausher, Muscat',
     locationAr: 'الباطنة، مسقط',
     year: 2015,
@@ -63,16 +63,16 @@ export const COMPLETED_PROJECTS = [
     area: '—',
     img: IMGS.rimal1Exterior,
     imgs: [IMGS.rimal1Aerial, IMGS.rimal1Facade, IMGS.rimal1Exterior, IMGS.rimal1Kitchen, IMGS.rimal1Living],
-    desc: '242-unit premium residential landmark — duplex, studio, 1–4 bedroom apartments, a shopping mall, and three underground basement parking levels. A 10-storey development with electronically operated access gates.',
-    descAr: 'معلم سكني فاخر من 242 وحدة — شقق دوبلكس واستوديو و1–4 غرف نوم، ومركز تجاري، وثلاثة مستويات من مواقف السيارات تحت الأرض. مشروع من 10 طوابق بأبواب دخول إلكترونية.',
+    desc: '242-unit premium residential landmark, duplex, studio, 1–4 bedroom apartments, a shopping mall, and three underground basement parking levels. A 10-storey development with electronically operated access gates.',
+    descAr: 'معلم سكني فاخر من 242 وحدة، شقق دوبلكس واستوديو و1–4 غرف نوم، ومركز تجاري، وثلاثة مستويات من مواقف السيارات تحت الأرض. مشروع من 10 طوابق بأبواب دخول إلكترونية.',
     highlights: ['242 residential units', '10-storey building', '3 basement parking levels', 'Shopping mall included', 'Grand twin reception lobbies'],
   },
   {
     id: 'office-1991',
     title: 'OFFICE 1991',
     subtitle: 'Commercial Tower',
-    client: 'AQAR — Al Khonji Real Estate',
-    clientAr: 'عقار — الخنجي للعقارات',
+    client: 'AQAR, Al Khonji Real Estate',
+    clientAr: 'عقار، الخنجي للعقارات',
     location: 'Bausher, Muscat',
     locationAr: 'الباطنة، مسقط',
     year: 2021,
@@ -89,8 +89,8 @@ export const COMPLETED_PROJECTS = [
     id: 'the-office',
     title: 'The Office',
     subtitle: 'Commercial Development',
-    client: 'AQAR — Al Khonji Real Estate',
-    clientAr: 'عقار — الخنجي للعقارات',
+    client: 'AQAR, Al Khonji Real Estate',
+    clientAr: 'عقار، الخنجي للعقارات',
     location: 'Al Ghubrah, Muscat',
     locationAr: 'الغبرة، مسقط',
     year: 2018,
@@ -107,8 +107,8 @@ export const COMPLETED_PROJECTS = [
     id: 'al-wadi-complex',
     title: 'Al Wadi Complex',
     subtitle: 'Residential Townhouses',
-    client: 'AQAR — Al Khonji Real Estate',
-    clientAr: 'عقار — الخنجي للعقارات',
+    client: 'AQAR, Al Khonji Real Estate',
+    clientAr: 'عقار، الخنجي للعقارات',
     location: 'Bausher, Muscat',
     locationAr: 'الباطنة، مسقط',
     year: 2012,
@@ -179,8 +179,8 @@ export const COMPLETED_PROJECTS = [
     id: 'al-qurm-hills',
     title: 'Al Qurm Hills',
     subtitle: 'Premium Townhouses',
-    client: 'AQAR — Al Khonji Real Estate',
-    clientAr: 'عقار — الخنجي للعقارات',
+    client: 'AQAR, Al Khonji Real Estate',
+    clientAr: 'عقار، الخنجي للعقارات',
     location: 'Al Qurm, Muscat',
     locationAr: 'القرم، مسقط',
     year: 2012,
@@ -196,8 +196,8 @@ export const COMPLETED_PROJECTS = [
     id: 'al-qurm-terrace',
     title: 'Al Qurm Terrace',
     subtitle: 'Premium Townhouses',
-    client: 'AQAR — Al Khonji Real Estate',
-    clientAr: 'عقار — الخنجي للعقارات',
+    client: 'AQAR, Al Khonji Real Estate',
+    clientAr: 'عقار، الخنجي للعقارات',
     location: 'Al Qurm, Muscat',
     locationAr: 'القرم، مسقط',
     year: 2003,
@@ -205,8 +205,8 @@ export const COMPLETED_PROJECTS = [
     cost: '—',
     area: '—',
     img: `${LOCAL}/al-qurm-terrace-render.jpg`,
-    desc: '12 townhouses in Al Qurm combining technical expertise with premium architectural finishes — one of Al Binaa\'s earliest landmark residential deliveries.',
-    descAr: '12 تاون هاوس في القرم تجمع بين الخبرة التقنية والتشطيبات المعمارية الراقية — أحد أوائل المشاريع السكنية البارزة للبناء.',
+    desc: '12 townhouses in Al Qurm combining technical expertise with premium architectural finishes, one of Al Binaa\'s earliest landmark residential deliveries.',
+    descAr: '12 تاون هاوس في القرم تجمع بين الخبرة التقنية والتشطيبات المعمارية الراقية، أحد أوائل المشاريع السكنية البارزة للبناء.',
     highlights: ['12 townhouses', 'Premium finishes', 'Al Binaa founding-era project'],
   },
 ];
@@ -217,8 +217,8 @@ export const ONGOING_PROJECTS = [
     id: 'rimal-2',
     title: 'Rimal II',
     subtitle: 'Residential Complex',
-    client: 'AQAR — Al Khonji Real Estate',
-    clientAr: 'عقار — الخنجي للعقارات',
+    client: 'AQAR, Al Khonji Real Estate',
+    clientAr: 'عقار، الخنجي للعقارات',
     location: 'Bausher, Muscat',
     locationAr: 'الباطنة، مسقط',
     year: 2024,
@@ -227,13 +227,13 @@ export const ONGOING_PROJECTS = [
     area: '52,000 sqm',
     img: IMGS.rimal2Render,
     imgs: [IMGS.rimal2Render],
-    desc: '148 residential units across 52,000 sqm — 1, 2 and 3-bedroom apartments plus a shopping mall in a 10-storey building with three underground parking levels.',
-    descAr: '148 وحدة سكنية على مساحة 52,000 م² — شقق بغرفة إلى 3 غرف نوم ومركز تجاري في مبنى من 10 طوابق مع ثلاثة مستويات مواقف سيارات تحت الأرض.',
+    desc: '148 residential units across 52,000 sqm, 1, 2 and 3-bedroom apartments plus a shopping mall in a 10-storey building with three underground parking levels.',
+    descAr: '148 وحدة سكنية على مساحة 52,000 م²، شقق بغرفة إلى 3 غرف نوم ومركز تجاري في مبنى من 10 طوابق مع ثلاثة مستويات مواقف سيارات تحت الأرض.',
     highlights: ['148 residential units', '52,000 sqm total area', '10-storey with 3B parking', 'Integrated shopping mall'],
   },
   {
     id: 'ibis-ruwi',
-    title: 'Ibis Style Hotel — Ruwi',
+    title: 'Ibis Style Hotel, Ruwi',
     subtitle: 'Hotel Renovation',
     client: 'Oman Hotels',
     clientAr: 'فنادق عُمان',
@@ -349,13 +349,13 @@ export const SERVICES = [
     title: 'Structure',
     titleAr: 'الهيكل الإنشائي',
     img: IMGS.industrial1,
-    tagline: 'Reinforced concrete & steel — from single villa to 10-storey tower',
-    taglineAr: 'الخرسانة المسلحة والصلب — من الفيلا إلى البرج العشري',
-    desc: 'Our structural division delivers robust, precision-engineered concrete and steel frameworks for projects of every scale — from private villas to 10-storey mixed-use towers. We manage every phase from substructure to superstructure.',
-    descAr: 'يقدم قسمنا الإنشائي هياكل خرسانية وفولاذية متينة ومهندسة بدقة لمشاريع من جميع الأحجام — من الفلل الخاصة إلى الأبراج متعددة الاستخدامات من 10 طوابق. ندير كل مرحلة من البنية التحتية إلى الهيكل العلوي.',
+    tagline: 'Reinforced concrete & steel, from single villa to 13-storey tower',
+    taglineAr: 'الخرسانة المسلحة والصلب، من الفيلا إلى البرج المكوّن من 13 طابقاً',
+    desc: 'Our structural division delivers robust, precision-engineered concrete and steel frameworks for projects of every scale, from private villas to 13-storey mixed-use towers. We manage every phase from substructure to superstructure.',
+    descAr: 'يقدم قسمنا الإنشائي هياكل خرسانية وفولاذية متينة ومهندسة بدقة لمشاريع من جميع الأحجام، من الفلل الخاصة إلى الأبراج متعددة الاستخدامات المكوّنة من 13 طابقاً. ندير كل مرحلة من البنية التحتية إلى الهيكل العلوي.',
     scope: [
       'Reinforced concrete design & execution',
-      'Deep foundations — piling & raft',
+      'Deep foundations, piling & raft',
       'Post-tensioned slabs & transfer structures',
       'Structural steel fabrication & erection',
       'Basement & below-grade construction',
@@ -363,7 +363,7 @@ export const SERVICES = [
     ],
     scopeAr: [
       'تصميم وتنفيذ الخرسانة المسلحة',
-      'الأساسات العميقة — الركائز والطوافات',
+      'الأساسات العميقة، الركائز والطوافات',
       'الألواح المشدودة لاحقاً وهياكل النقل',
       'تصنيع الصلب الإنشائي وتركيبه',
       'البناء تحت مستوى الأرض',
@@ -376,8 +376,8 @@ export const SERVICES = [
     title: 'MEP',
     titleAr: 'الميكانيكا والكهرباء والسباكة',
     img: IMGS.mepSystems,
-    tagline: 'Mechanical, Electrical & Plumbing — designed and installed in-house',
-    taglineAr: 'الميكانيكا والكهرباء والسباكة — تصميم وتنفيذ داخلي متكامل',
+    tagline: 'Mechanical, Electrical & Plumbing, designed and installed in-house',
+    taglineAr: 'الميكانيكا والكهرباء والسباكة، تصميم وتنفيذ داخلي متكامل',
     desc: 'Al Binaa\'s MEP division provides full mechanical, electrical, and plumbing systems designed and installed to Oman authority standards. Our in-house engineers co-ordinate all disciplines from design stage through commissioning.',
     descAr: 'يوفر قسم MEP في البناء أنظمة ميكانيكية وكهربائية وسباكة متكاملة مصممة ومنفذة وفق معايير السلطات العُمانية. ينسق مهندسونا الداخليون جميع التخصصات من مرحلة التصميم حتى التشغيل.',
     scope: [
@@ -403,8 +403,8 @@ export const SERVICES = [
     title: 'Interior Finishing & Quality',
     titleAr: 'التشطيبات الداخلية والجودة',
     img: IMGS.residential1,
-    tagline: 'The quality layer clients see every day — plaster, tile, gypsum, paint',
-    taglineAr: 'طبقة الجودة التي يعيشها العميل يومياً — لياسة وبلاط وجبس وطلاء',
+    tagline: 'The quality layer clients see every day: plaster, tile, gypsum, paint',
+    taglineAr: 'طبقة الجودة التي يعيشها العميل يومياً: لياسة وبلاط وجبس وطلاء',
     desc: 'Our finishing division is responsible for the final layer of quality that clients and end-users experience every day. Skilled tradespeople across plastering, tiling, gypsum, painting, and decoration bring specifications to life.',
     descAr: 'قسم التشطيبات لدينا مسؤول عن الطبقة الأخيرة من الجودة التي يعايشها العملاء والمستخدمون كل يوم. حرفيون مهرة في اللياسة والبلاط والجبس والطلاء والديكور يحولون المواصفات إلى واقع.',
     scope: [
@@ -432,22 +432,22 @@ export const HISTORY_TIMELINE = [
     year: '1999',
     milestone: 'Founded',
     milestoneAr: 'التأسيس',
-    desc: 'Al Binaa Construction & Industry established under the Al Khonji Group, Muscat. First project delivered: residential buildings in Muscat.',
+    desc: 'Al Binaa Construction & Industry SAOC established under the Al Khonji Group, Muscat. First project delivered: residential buildings in Muscat.',
     descAr: 'تأسست شركة البناء للمقاولات والصناعة تحت مجموعة الخنجي في مسقط. تسليم أول مشروع: مباني سكنية في مسقط.',
   },
   {
     year: '2003',
     milestone: 'Early Growth',
     milestoneAr: 'النمو المبكر',
-    desc: 'Residential building in Darsait — 4 floors, 14 apartments. Al Qurm Terrace delivered: 12 premium townhouses recognised for exceptional finishes.',
-    descAr: 'مبنى سكني في درسيت — 4 طوابق و14 شقة. تسليم تراس القرم: 12 تاون هاوس فاخراً مميزاً بتشطيبات استثنائية.',
+    desc: 'Residential building in Darsait, 4 floors, 14 apartments. Al Qurm Terrace delivered: 12 premium townhouses recognised for exceptional finishes.',
+    descAr: 'مبنى سكني في درسيت، 4 طوابق و14 شقة. تسليم تراس القرم: 12 تاون هاوس فاخراً مميزاً بتشطيبات استثنائية.',
   },
   {
     year: '2005',
     milestone: 'Villa Portfolio',
     milestoneAr: 'محفظة الفلل',
-    desc: '13 Grade A residential villas delivered — establishing Al Binaa’s reputation for premium residential quality.',
-    descAr: 'تسليم 13 فيلا سكنية من الدرجة الأولى — ترسيخ سمعة البناء في جودة السكن الفاخر.',
+    desc: '13 Grade A residential villas delivered, establishing Al Binaa’s reputation for premium residential quality.',
+    descAr: 'تسليم 13 فيلا سكنية من الدرجة الأولى، ترسيخ سمعة البناء في جودة السكن الفاخر.',
   },
   {
     year: '2012',
@@ -458,10 +458,10 @@ export const HISTORY_TIMELINE = [
   },
   {
     year: '2015',
-    milestone: 'Landmark — Rimal I',
-    milestoneAr: 'معلم رئيسي — ريمال I',
-    desc: 'Rimal I completed: 242-unit mixed-use residential tower in Bausher — 10 storeys, 3 basement levels, shopping mall. OMR 13.59M.',
-    descAr: 'اكتمال ريمال I: برج سكني متعدد الاستخدامات من 242 وحدة في الباطنة — 10 طوابق و3 مستويات تحت الأرض ومركز تجاري. 13.59 مليون ريال.',
+    milestone: 'Landmark, Rimal I',
+    milestoneAr: 'معلم رئيسي، ريمال I',
+    desc: 'Rimal I completed: 242-unit mixed-use residential tower in Bausher, 10 storeys, 3 basement levels, shopping mall. OMR 13.59M.',
+    descAr: 'اكتمال ريمال I: برج سكني متعدد الاستخدامات من 242 وحدة في الباطنة، 10 طوابق و3 مستويات تحت الأرض ومركز تجاري. 13.59 مليون ريال.',
   },
   {
     year: '2018',
@@ -474,8 +474,8 @@ export const HISTORY_TIMELINE = [
     year: '2021',
     milestone: 'OFFICE 1991',
     milestoneAr: 'أوفيس 1991',
-    desc: 'OFFICE 1991 delivered ahead of schedule — 9-storey commercial tower, 4 basement levels, bespoke architectural fit-out. OMR 12.1M.',
-    descAr: 'تسليم أوفيس 1991 قبل الموعد المحدد — برج تجاري من 9 طوابق و4 مستويات تحت الأرض وتجهيز معماري مخصص. 12.1 مليون ريال.',
+    desc: 'OFFICE 1991 delivered ahead of schedule, 9-storey commercial tower, 4 basement levels, bespoke architectural fit-out. OMR 12.1M.',
+    descAr: 'تسليم أوفيس 1991 قبل الموعد المحدد، برج تجاري من 9 طوابق و4 مستويات تحت الأرض وتجهيز معماري مخصص. 12.1 مليون ريال.',
   },
   {
     year: '2023',
@@ -506,8 +506,8 @@ export const WHY_CHOOSE_US = [
     num: '02',
     title: 'End-to-End Capability',
     titleAr: 'قدرة متكاملة من الألف إلى الياء',
-    desc: 'Full-scope execution covering structural works, MEP coordination, finishing, and handover — seamless integration across all phases under one contract.',
-    descAr: 'تنفيذ شامل يغطي أعمال الهيكل الإنشائي وتنسيق MEP والتشطيبات والتسليم — تكامل سلس عبر جميع المراحل تحت عقد واحد.',
+    desc: 'Full-scope execution covering structural works, MEP coordination, finishing, and handover, seamless integration across all phases under one contract.',
+    descAr: 'تنفيذ شامل يغطي أعمال الهيكل الإنشائي وتنسيق MEP والتشطيبات والتسليم، تكامل سلس عبر جميع المراحل تحت عقد واحد.',
   },
   {
     num: '03',
@@ -629,7 +629,6 @@ export const MANPOWER = [
 export const EQUIPMENT = [
   { name: 'Tower Cranes', qty: 6, desc: 'High-capacity vertical lifting for large-scale projects' },
   { name: 'Mobile Cranes', qty: 4, desc: 'Rapid deployment across diverse terrain' },
-  { name: 'Excavation Cranes', qty: 4, desc: 'Precision earthworks and foundation excavation' },
   { name: 'Heavy Transport Trucks', qty: 5, desc: 'Sand, aggregate, and materials logistics' },
   { name: 'Wheel Loaders', qty: 1, desc: 'Site material handling' },
   { name: 'Bobcats', qty: 2, desc: 'Compact site manoeuvring' },
@@ -642,7 +641,7 @@ export const EQUIPMENT = [
 // ─── Nav mega-menu ────────────────────────────────────────────────────────
 export const MEGA_MENUS = {
   services: {
-    img: IMGS.building2,    // Rimal I exterior — landmark Muscat project
+    img: IMGS.building2,    // Rimal I exterior, landmark Muscat project
     items: [
       { title: 'Structure',                   desc: 'Reinforced concrete, foundations & steel',   href: '/services', section: 0 },
       { title: 'MEP',                         desc: 'Mechanical, electrical & plumbing systems',  href: '/services', section: 1 },
@@ -650,7 +649,7 @@ export const MEGA_MENUS = {
     ],
   },
   projects: {
-    img: IMGS.rimal1Facade,  // default — Rimal I façade
+    img: IMGS.rimal1Facade,  // default, Rimal I façade
     items: [
       { title: 'Rimal I',                 desc: 'Residential · 242 units · Bausher',       href: '/projects', filter: 'Residential', img: IMGS.rimal1Facade      },
       { title: 'OFFICE 1991',             desc: 'Commercial · 9 floors · Bausher',          href: '/projects', filter: 'Commercial',  img: IMGS.office1991Night   },
@@ -658,5 +657,103 @@ export const MEGA_MENUS = {
       { title: 'Rimal II',                desc: 'Ongoing · 148 units · Bausher',            href: '/projects', filter: 'Ongoing',     img: IMGS.rimal2Render      },
     ],
     cta: 'View All Projects',
+  },
+};
+
+// ─── FAQ (AEO/GEO) ──────────────────────────────────────────────────────────
+// Answer-first, self-contained Q&A. Drives both the visible FAQ blocks and the
+// FAQPage JSON-LD so answer engines and LLMs can extract clean, citable answers.
+export const HOME_FAQ_EN = [
+  {
+    q: 'How long has Al Binaa been operating in Oman?',
+    a: 'Al Binaa Construction & Industry SAOC has operated in Oman since 1997, over 30 years, delivering 200+ projects across residential, commercial, hospitality, health, and industrial sectors. It is part of the Al Khonji Group, one of Oman\'s most established business families.',
+  },
+  {
+    q: 'What does single-contract construction mean?',
+    a: 'Single-contract construction means one company delivers structure, MEP, and interior finishing with its own in-house team under one contract. There are no handovers between subcontractors, so the client gets one point of accountability and no coordination or interface risk.',
+  },
+  {
+    q: 'What types of projects does Al Binaa build?',
+    a: 'Al Binaa builds residential towers, commercial buildings, hotels, private villas, and renovations, from single villas to 13-storey towers. Typical contract values range from OMR 1M to OMR 20M+, and the company usually runs four to six projects at once.',
+  },
+  {
+    q: 'Is Al Binaa a certified contractor?',
+    a: 'Yes. Al Binaa holds ISO 9001:2015 certification from Bureau Veritas and Commercial Registration 2693300 with Oman\'s Ministry of Commerce, Industry and Investment Promotion. QA/QC engineers are assigned on-site from groundwork through final finishing sign-off.',
+  },
+  {
+    q: 'How quickly does Al Binaa respond to enquiries?',
+    a: 'Every enquiry is reviewed by a senior project manager, and you receive a detailed response, including preliminary scope and an indicative timeline, within 48 hours.',
+  },
+  {
+    q: 'Where in Oman does Al Binaa work?',
+    a: 'Al Binaa is based in Muscat and delivers projects across all governorates of Oman, from Dhofar to the Batinah Coast, and is equipped for full mobilisation anywhere in the Sultanate.',
+  },
+];
+export const HOME_FAQ_AR = [
+  {
+    q: 'منذ متى تعمل شركة البناء في عُمان؟',
+    a: 'تعمل شركة البناء للإنشاءات والصناعة ش.م.ع.م في عُمان منذ عام 1997، أكثر من 30 عاماً، وقد أنجزت أكثر من 200 مشروع في القطاعات السكنية والتجارية والضيافة والصحية والصناعية. وهي جزء من مجموعة الخنجي، إحدى أعرق العائلات التجارية في عُمان.',
+  },
+  {
+    q: 'ماذا يعني نموذج العقد الواحد في الإنشاء؟',
+    a: 'يعني نموذج العقد الواحد أن شركة واحدة تنفّذ الهيكل الإنشائي وأنظمة MEP والتشطيبات الداخلية بفريقها الداخلي ضمن عقد واحد. لا تسليم بين مقاولين من الباطن، فيحصل العميل على جهة مسؤولية واحدة دون فجوات تنسيق أو مخاطر تداخل.',
+  },
+  {
+    q: 'ما أنواع المشاريع التي تنفّذها شركة البناء؟',
+    a: 'تنفّذ شركة البناء أبراجاً سكنية ومباني تجارية وفنادق وفللاً خاصة وأعمال تجديد، من الفيلا الواحدة إلى الأبراج المكوّنة من 13 طابقاً. تتراوح قيم العقود عادةً بين 1 و20 مليون ريال عُماني وأكثر، وتدير الشركة من أربعة إلى ستة مشاريع في آن واحد.',
+  },
+  {
+    q: 'هل شركة البناء مقاول معتمد؟',
+    a: 'نعم. تحمل شركة البناء شهادة ISO 9001:2015 من Bureau Veritas والسجل التجاري 2693300 لدى وزارة التجارة والصناعة وترويج الاستثمار. يُعيَّن مهندسو ضمان الجودة في الموقع من أعمال الأساس حتى التوقيع النهائي على التشطيبات.',
+  },
+  {
+    q: 'ما سرعة رد شركة البناء على الاستفسارات؟',
+    a: 'يُراجَع كل استفسار من قِبل مدير مشروع أول، وتتلقى رداً مفصلاً، يشمل النطاق الأولي والجدول الزمني التقديري، خلال 48 ساعة.',
+  },
+  {
+    q: 'أين تعمل شركة البناء في عُمان؟',
+    a: 'تتخذ شركة البناء من مسقط مقراً لها وتنفّذ مشاريع في جميع محافظات عُمان، من ظفار إلى ساحل الباطنة، وهي مجهزة للتعبئة الكاملة في أي مكان في السلطنة.',
+  },
+];
+
+// Process steps (HowTo), mirrors the "From Brief to Handover" section on the homepage.
+export const PROCESS_STEPS_EN = [
+  { name: 'Brief & Site Assessment', text: 'We visit the site, assess scope, and align on requirements before a drawing is made.' },
+  { name: 'Design & Permits', text: 'Our in-house engineers produce permit-ready drawings and manage all authority submissions.' },
+  { name: 'Build', text: 'Our three divisions, Structure, MEP, and Finishing, work under one site team.' },
+  { name: 'Handover', text: 'Snagging, commissioning, and final quality inspection before keys are handed over.' },
+];
+
+// Per-service FAQ for the /services/[slug] pages.
+export const SERVICE_FAQ: Record<string, { en: { q: string; a: string }[]; ar: { q: string; a: string }[] }> = {
+  structure: {
+    en: [
+      { q: 'Does Al Binaa handle structural and civil works in-house?', a: 'Yes. Al Binaa\'s structural division delivers reinforced concrete, deep foundations, post-tensioned slabs, and steel framework with directly employed engineers and tradespeople, no agency labour, from single villas to 13-storey towers.' },
+      { q: 'What is the tallest structure Al Binaa builds?', a: 'Al Binaa builds from single private villas up to 13-storey mixed-use towers, managing every phase from substructure to superstructure under one contract.' },
+    ],
+    ar: [
+      { q: 'هل تنفّذ شركة البناء أعمال الهيكل الإنشائي والمدني داخلياً؟', a: 'نعم. ينفّذ قسم الهيكل الإنشائي في شركة البناء الخرسانة المسلحة والأساسات العميقة والألواح المشدودة لاحقاً والهياكل الفولاذية بمهندسين وحرفيين موظفين مباشرةً، لا عمالة وكالات، من الفيلا الواحدة إلى الأبراج المكوّنة من 13 طابقاً.' },
+      { q: 'ما أعلى هيكل تنفّذه شركة البناء؟', a: 'تنفّذ شركة البناء من الفلل الخاصة المفردة حتى الأبراج متعددة الاستخدامات المكوّنة من 13 طابقاً، وتدير كل مرحلة من البنية التحتية إلى الهيكل العلوي ضمن عقد واحد.' },
+    ],
+  },
+  mep: {
+    en: [
+      { q: 'Does Al Binaa do MEP in-house?', a: 'Yes. Al Binaa\'s MEP division designs and installs mechanical, electrical, and plumbing systems with in-house engineers, coordinated with structure and finishing under one contract and built to Oman authority standards.' },
+      { q: 'What MEP systems does Al Binaa install?', a: 'HVAC, low-voltage electrical, plumbing, drainage, fire-fighting, BMS smart-building systems, and solar, all designed, installed, tested, and commissioned by Al Binaa\'s own team.' },
+    ],
+    ar: [
+      { q: 'هل تنفّذ شركة البناء أنظمة MEP داخلياً؟', a: 'نعم. يصمّم قسم MEP في شركة البناء وينفّذ الأنظمة الميكانيكية والكهربائية والسباكة بمهندسين داخليين، بالتنسيق مع الهيكل والتشطيبات ضمن عقد واحد ووفق معايير السلطات العُمانية.' },
+      { q: 'ما أنظمة MEP التي تنفّذها شركة البناء؟', a: 'التكييف والأنظمة الكهربائية منخفضة الجهد والسباكة والصرف الصحي وإطفاء الحريق وأنظمة إدارة المبنى الذكية والطاقة الشمسية، يصممها وينفّذها ويختبرها ويشغّلها فريق شركة البناء.' },
+    ],
+  },
+  finishing: {
+    en: [
+      { q: 'What does Al Binaa\'s interior finishing cover?', a: 'Al Binaa\'s finishing division delivers plastering, floor and wall tiling, gypsum ceilings and partitions, decorative painting, joinery, and external paving, the final quality layer clients experience every day.' },
+      { q: 'Can Al Binaa do finishing only, or as part of a full contract?', a: 'Both. Interior finishing is available as a standalone package or as part of Al Binaa\'s single-contract model alongside structure and MEP.' },
+    ],
+    ar: [
+      { q: 'ماذا تشمل التشطيبات الداخلية لدى شركة البناء؟', a: 'ينفّذ قسم التشطيبات في شركة البناء أعمال اللياسة وبلاط الأرضيات والجدران وأسقف وتقسيمات الجبس والطلاء الديكوري والنجارة والرصف الخارجي، طبقة الجودة الأخيرة التي يعيشها العملاء كل يوم.' },
+      { q: 'هل يمكن تنفيذ التشطيبات وحدها أم ضمن عقد متكامل؟', a: 'كلاهما. تتوفر التشطيبات الداخلية كحزمة مستقلة أو ضمن نموذج العقد الواحد لدى شركة البناء إلى جانب الهيكل وأنظمة MEP.' },
+    ],
   },
 };

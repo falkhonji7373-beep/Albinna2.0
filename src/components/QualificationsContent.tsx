@@ -14,7 +14,7 @@ export function QualificationsContent() {
         {
           label: 'معيار نظام إدارة الجودة',
           value: 'ISO 9001:2015',
-          detail: 'معتمد من Bureau Veritas — ينطبق على كافة مراحل الإنشاء: التصميم والتوريد والتنفيذ والتسليم.',
+          detail: 'معتمد من Bureau Veritas، ينطبق على كافة مراحل الإنشاء: التصميم والتوريد والتنفيذ والتسليم.',
         },
         {
           label: 'السجل التجاري',
@@ -24,19 +24,19 @@ export function QualificationsContent() {
         {
           label: 'سنة التأسيس',
           value: '1997',
-          detail: 'تأسست بدعم من مجموعة الخنجي — تمتد عملياتها المتواصلة لأكثر من 28 عامًا.',
+          detail: 'تأسست بدعم من مجموعة الخنجي، تمتد عملياتها المتواصلة لأكثر من 30 عامًا.',
         },
         {
           label: 'حجم القوى العاملة',
-          value: '600+ عضو',
-          detail: 'موظفون مباشرون — مهندسون ومشرفون وحرفيون متخصصون. لا عمالة وكالات.',
+          value: '1,000+ عضو',
+          detail: 'موظفون مباشرون، مهندسون ومشرفون وحرفيون متخصصون. لا عمالة وكالات.',
         },
       ]
     : [
         {
           label: 'Quality Management Standard',
           value: 'ISO 9001:2015',
-          detail: 'Certified by Bureau Veritas — applied across all construction phases: design, procurement, execution, and handover.',
+          detail: 'Certified by Bureau Veritas, applied across all construction phases: design, procurement, execution, and handover.',
         },
         {
           label: 'Commercial Registration',
@@ -46,12 +46,12 @@ export function QualificationsContent() {
         {
           label: 'Year Established',
           value: '1997',
-          detail: 'Founded under Al Khonji Group — over 28 years of uninterrupted operations in the Sultanate.',
+          detail: 'Founded under Al Khonji Group, over 30 years of uninterrupted operations in the Sultanate.',
         },
         {
           label: 'Workforce Size',
-          value: '600+ Members',
-          detail: 'Direct employees — engineers, supervisors, and skilled tradespeople. No agency labour on any project.',
+          value: '1,000+ Members',
+          detail: 'Direct employees, engineers, supervisors, and skilled tradespeople. No agency labour on any project.',
         },
       ];
 
@@ -62,7 +62,7 @@ export function QualificationsContent() {
         { num: '03', title: 'التشطيبات الداخلية والجودة', desc: 'الأعمال الجدارية والأسقف المستعارة والأرضيات وتركيب الزجاج والجوائز الداخلية والنجارة.', href: `/${locale}/services/finishing` },
       ]
     : [
-        { num: '01', title: 'Structural & Civil', desc: 'Reinforced concrete frames, foundations, and civil works — plus external ancillaries and façade finishes.', href: `/${locale}/services/structure` },
+        { num: '01', title: 'Structural & Civil', desc: 'Reinforced concrete frames, foundations, and civil works, plus external ancillaries and façade finishes.', href: `/${locale}/services/structure` },
         { num: '02', title: 'MEP Systems', desc: 'HVAC, plumbing and drainage, electrical and lighting, low-current systems, and firefighting networks.', href: `/${locale}/services/mep` },
         { num: '03', title: 'Interior Finishing', desc: 'Wall and ceiling systems, flooring, glazing, internal partitions, joinery, and thermal and acoustic works.', href: `/${locale}/services/finishing` },
       ];
@@ -145,7 +145,7 @@ export function QualificationsContent() {
                     {isRTL ? ((p as any).titleAr ?? p.title) : p.title}
                   </div>
                   <div style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--fg-muted)', marginBottom: '0.25rem' }}>
-                    {isRTL ? ((p as any).locationAr ?? p.location) : p.location} — {p.year}
+                    {isRTL ? ((p as any).locationAr ?? p.location) : p.location}, {p.year}
                   </div>
                   {p.cost && p.cost !== '—' && (
                     <div style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--red)', fontWeight: 600 }}>
@@ -173,7 +173,7 @@ export function QualificationsContent() {
                 {isRTL ? 'ملف الشركة' : 'Company Profile'}
               </div>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', fontWeight: 700, color: 'var(--fg)', marginBottom: '0.5rem' }}>
-                {isRTL ? 'ملف الشركة الكامل — PDF' : 'Full Company Profile — PDF'}
+                {isRTL ? 'ملف الشركة الكامل، PDF' : 'Full Company Profile, PDF'}
               </div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 13.5, color: 'var(--fg-muted)', margin: 0, lineHeight: 1.6 }}>
                 {isRTL

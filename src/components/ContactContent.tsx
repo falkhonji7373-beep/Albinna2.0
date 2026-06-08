@@ -8,8 +8,8 @@ import { IMGS } from '@/lib/data';
 import { FORMSPREE_ENDPOINT } from '@/lib/config';
 import { useReveal } from '@/hooks/useReveal';
 
-const PROJECT_TYPES_EN = ['Commercial', 'Residential', 'Hospitality', 'Industrial', 'Infrastructure', 'Renovation', 'Other'];
-const PROJECT_TYPES_AR = ['تجاري', 'سكني', 'ضيافة', 'صناعي', 'بنية تحتية', 'تجديد', 'أخرى'];
+const PROJECT_TYPES_EN = ['Commercial', 'Residential', 'Hospitality', 'Health', 'Industrial', 'Infrastructure', 'Renovation', 'Other'];
+const PROJECT_TYPES_AR = ['تجاري', 'سكني', 'ضيافة', 'صحي', 'صناعي', 'بنية تحتية', 'تجديد', 'أخرى'];
 const BUDGETS_EN = ['Under 50,000 OMR', '50,000 – 200,000 OMR', '200,000 – 500,000 OMR', '500,000 – 1,000,000 OMR', 'Above 1,000,000 OMR', 'To be discussed'];
 const BUDGETS_AR = ['أقل من 50,000 ريال', '50,000 – 200,000 ريال', '200,000 – 500,000 ريال', '500,000 – 1,000,000 ريال', 'أكثر من 1,000,000 ريال', 'يحدد لاحقاً'];
 
@@ -82,7 +82,7 @@ export function ContactContent() {
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ ...form, _subject: `New Project Enquiry — ${form.projectType} — ${form.name}` }),
+        body: JSON.stringify({ ...form, _subject: `New Project Enquiry, ${form.projectType}, ${form.name}` }),
       });
       if (res.ok) {
         setSubmitted(true);
@@ -217,8 +217,8 @@ export function ContactContent() {
               </div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 13.5, color: 'rgba(255,255,255,0.82)', lineHeight: 1.65, margin: 0 }}>
                 {isRTL
-                  ? 'يُراجَع كل استفسار من قِبل مدير مشروع أول. ستتلقى رداً مفصلاً — يشمل النطاق الأولي والجدول الزمني التقديري — في يوم عمل واحد.'
-                  : 'Every enquiry is reviewed by a senior project manager. You will receive a detailed response — including preliminary scope and indicative timeline — within one working day.'}
+                  ? 'يُراجَع كل استفسار من قِبل مدير مشروع أول. ستتلقى رداً مفصلاً، يشمل النطاق الأولي والجدول الزمني التقديري، خلال 48 ساعة.'
+                  : 'Every enquiry is reviewed by a senior project manager. You will receive a detailed response, including preliminary scope and indicative timeline, within 48 hours.'}
               </p>
             </div>
 
@@ -252,24 +252,24 @@ export function ContactContent() {
                 <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                   <div>
                     <label style={labelStyle}>{t('form_name')} <span style={{ color: 'var(--red)' }}>*</span></label>
-                    <input value={form.name} onChange={e => set('name', e.target.value)} placeholder={isRTL ? 'أحمد الراشدي' : 'Ahmed Al Rashidi'} style={inputStyle('name')} />
+                    <input value={form.name} onChange={e => set('name', e.target.value)} style={inputStyle('name')} />
                     {errors.name && <p style={errorStyle}>{errors.name}</p>}
                   </div>
                   <div>
                     <label style={labelStyle}>{t('form_company')}</label>
-                    <input value={form.company} onChange={e => set('company', e.target.value)} placeholder={isRTL ? 'شركة عقار' : 'AQAR Real Estate'} style={inputStyle('company')} />
+                    <input value={form.company} onChange={e => set('company', e.target.value)} style={inputStyle('company')} />
                   </div>
                 </div>
 
                 <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                   <div>
                     <label style={labelStyle}>{t('form_phone')} <span style={{ color: 'var(--red)' }}>*</span></label>
-                    <input value={form.phone} onChange={e => set('phone', e.target.value)} placeholder="+968 9XXX XXXX" type="tel" style={inputStyle('phone')} dir="ltr" />
+                    <input value={form.phone} onChange={e => set('phone', e.target.value)} type="tel" style={inputStyle('phone')} dir="ltr" />
                     {errors.phone && <p style={errorStyle}>{errors.phone}</p>}
                   </div>
                   <div>
                     <label style={labelStyle}>{t('form_email')}</label>
-                    <input value={form.email} onChange={e => set('email', e.target.value)} placeholder="name@company.com" type="email" style={inputStyle('email')} dir="ltr" />
+                    <input value={form.email} onChange={e => set('email', e.target.value)} type="email" style={inputStyle('email')} dir="ltr" />
                     {errors.email && <p style={errorStyle}>{errors.email}</p>}
                   </div>
                 </div>
@@ -298,7 +298,6 @@ export function ContactContent() {
                     value={form.message}
                     onChange={e => set('message', e.target.value)}
                     rows={5}
-                    placeholder={isRTL ? 'صِف مشروعك — الموقع والنطاق والجدول الزمني وأي متطلبات خاصة…' : 'Describe your project — location, scope, timeline, and any specific requirements…'}
                     style={{ ...inputStyle('message'), resize: 'vertical', fontFamily: 'var(--font-body)' }}
                   />
                   {errors.message && <p style={errorStyle}>{errors.message}</p>}
@@ -343,8 +342,8 @@ export function ContactContent() {
             </h3>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--fg-muted)', lineHeight: 1.75, margin: '0 0 2rem' }}>
               {isRTL
-                ? 'مكتبنا المسجل في مسقط، مع مواقع مشاريع نشطة عبر السلطنة — من ظفار إلى ساحل الباطنة. نحن مجهزون للتعبئة الكاملة في أي مكان في عُمان.'
-                : 'Our registered office is in Muscat, with active project sites across the Sultanate — from Dhofar to the Batinah Coast. We are equipped for full mobilisation anywhere in Oman.'}
+                ? 'مكتبنا المسجل في مسقط، مع مواقع مشاريع نشطة عبر السلطنة، من ظفار إلى ساحل الباطنة. نحن مجهزون للتعبئة الكاملة في أي مكان في عُمان.'
+                : 'Our registered office is in Muscat, with active project sites across the Sultanate, from Dhofar to the Batinah Coast. We are equipped for full mobilisation anywhere in Oman.'}
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
               {[
@@ -360,7 +359,7 @@ export function ContactContent() {
           </div>
           <div style={{ background: 'var(--card-bg)', border: '1px solid var(--border-strong)', padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {[
-              { n: isRTL ? '< يوم' : '< 1 day', label: isRTL ? 'وقت الاستجابة' : 'Response Time',      desc: isRTL ? 'يُجيب على كل استفسار مدير مشروع خلال يوم عمل واحد.' : 'Every enquiry answered by a project manager within one business day.' },
+              { n: isRTL ? '48 ساعة' : '48 hrs', label: isRTL ? 'وقت الاستجابة' : 'Response Time',      desc: isRTL ? 'يُجيب على كل استفسار مدير مشروع خلال 48 ساعة.' : 'Every enquiry answered by a project manager within 48 hours.' },
               { n: '100%',  label: isRTL ? 'فريق عُماني بالكامل' : 'Oman-Based Team', desc: isRTL ? 'جميع إدارة المواقع والهندسة والإشراف تتم داخلياً.' : 'All site management, engineering, and supervision performed in-house.' },
               { n: '24/7',  label: isRTL ? 'مراقبة الموقع' : 'Site Monitoring',     desc: isRTL ? 'تُراقَب المواقع النشطة باستمرار من قِبل فريق العمليات.' : 'Active project sites monitored continuously by our operations team.' },
             ].map(item => (
@@ -373,6 +372,20 @@ export function ContactContent() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Embedded Google Map, exact registered office location */}
+        <div style={{ maxWidth: 1400, margin: 'clamp(2.5rem,4vw,3.5rem) auto 0', border: '1px solid var(--border-strong)', overflow: 'hidden', lineHeight: 0 }}>
+          <iframe
+            title={isRTL ? 'موقع شركة البناء على خرائط جوجل' : 'Al Binaa Construction & Industry SAOC, Google Maps location'}
+            src={`https://maps.google.com/maps?q=23.5871371,58.4536493%20(${encodeURIComponent('Al Binaa Construction & Industry SAOC')})&z=16&hl=${isRTL ? 'ar' : 'en'}&output=embed`}
+            width="100%"
+            height="420"
+            style={{ border: 0, display: 'block', filter: 'grayscale(0.15)' }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
         </div>
       </section>
     </main>

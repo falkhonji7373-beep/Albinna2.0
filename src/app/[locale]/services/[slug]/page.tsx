@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { ServiceDetailContent } from '@/components/ServiceDetailContent';
-import { SERVICES } from '@/lib/data';
+import { SERVICES, SERVICE_FAQ } from '@/lib/data';
 import { SITE_URL } from '@/lib/config';
 
 const LOCALES = ['en', 'ar'];
@@ -14,13 +14,13 @@ export function generateStaticParams() {
 
 const META_TITLES: Record<string, string> = {
   structure:  'Structural & Civil Contractor Muscat, Oman | Al Binaa Construction',
-  mep:        'MEP Contractor Oman — Mechanical, Electrical & Plumbing | Al Binaa',
+  mep:        'MEP Contractor Oman, Mechanical, Electrical & Plumbing | Al Binaa',
   finishing:  'Interior Finishing Contractor Oman | Al Binaa Construction',
 };
 
 const META_TITLES_AR: Record<string, string> = {
   structure:  'مقاول هيكل إنشائي ومدني مسقط، عُمان | البناء للإنشاءات',
-  mep:        'مقاول أنظمة MEP في عُمان — ميكانيكا وكهرباء وسباكة | البناء',
+  mep:        'مقاول أنظمة MEP في عُمان، ميكانيكا وكهرباء وسباكة | البناء',
   finishing:  'مقاول تشطيبات داخلية في عُمان | البناء للإنشاءات',
 };
 
@@ -89,12 +89,31 @@ export default async function ServiceDetailPage({
       }
     : null;
 
+  const faq = SERVICE_FAQ[slug];
+  const faqJsonLd = faq
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faq.en.map(({ q, a }) => ({
+          '@type': 'Question',
+          name: q,
+          acceptedAnswer: { '@type': 'Answer', text: a },
+        })),
+      }
+    : null;
+
   return (
     <>
       {jsonLd && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       )}
       <ServiceDetailContent slug={slug} />

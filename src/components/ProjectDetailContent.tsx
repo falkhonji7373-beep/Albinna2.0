@@ -60,7 +60,7 @@ export function ProjectDetailContent({ slug }: Props) {
           {/* Main content grid */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '5rem', alignItems: 'start' }} className="service-detail-grid">
 
-            {/* Left — case study */}
+            {/* Left, case study */}
             <div>
               <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--red)', fontWeight: 600, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: 10, flexDirection: isRTL ? 'row-reverse' : 'row' }}>
                 <span style={{ display: 'inline-block', width: 28, height: 1.5, background: 'var(--red)' }} />
@@ -101,7 +101,7 @@ export function ProjectDetailContent({ slug }: Props) {
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1px', background: 'var(--border-color)' }}>
                     {project.imgs.map((src: string, i: number) => (
                       <div key={i} style={{ height: 180, overflow: 'hidden' }}>
-                        <img src={src} alt={`${title} — ${i + 1}`} loading="lazy"
+                        <img src={src} alt={`${title}, ${i + 1}`} loading="lazy"
                           style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s', display: 'block' }}
                           onMouseEnter={e => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.06)'; }}
                           onMouseLeave={e => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
@@ -113,7 +113,7 @@ export function ProjectDetailContent({ slug }: Props) {
               )}
             </div>
 
-            {/* Right — project stats */}
+            {/* Right, project stats */}
             <aside style={{ position: 'sticky', top: '2rem' }}>
               <div style={{ border: '1px solid var(--border-color)', background: 'var(--card-bg)' }}>
                 {/* Category badge */}

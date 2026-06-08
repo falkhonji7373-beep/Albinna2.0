@@ -63,7 +63,7 @@ export default function ContactPage() {
           projectType: form.projectType,
           budget: form.budget,
           message: form.message,
-          _subject: `New Project Enquiry — ${form.projectType} — ${form.name}`,
+          _subject: `New Project Enquiry, ${form.projectType}, ${form.name}`,
         }),
       });
       if (res.ok) {
@@ -114,7 +114,7 @@ export default function ContactPage() {
     <main>
       <PageBanner
         title="Contact Us"
-        subtitle="Tell us about your project. We respond within one business day."
+        subtitle="Tell us about your project. We respond within 48 hours."
         img={IMGS.building1}
       />
 
@@ -143,7 +143,7 @@ export default function ContactPage() {
             {/* Fast Response Guarantee */}
             <div style={{ background: 'var(--red)', padding: '1.75rem 2rem' }}>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 700, color: '#fff', marginBottom: '0.5rem' }}>Fast Response Guarantee</div>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: 13.5, color: 'rgba(255,255,255,0.82)', lineHeight: 1.65, margin: 0 }}>Every enquiry is reviewed by a senior project manager. You will receive a detailed response — including preliminary scope and indicative timeline — within one working day.</p>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: 13.5, color: 'rgba(255,255,255,0.82)', lineHeight: 1.65, margin: 0 }}>Every enquiry is reviewed by a senior project manager. You will receive a detailed response, including preliminary scope and indicative timeline, within 48 hours.</p>
             </div>
 
             {/* Registration */}
@@ -165,7 +165,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: 700, color: 'var(--fg)', margin: '0 0 0.75rem' }}>Enquiry Received</h3>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'var(--fg-muted)', lineHeight: 1.7, margin: '0 0 2rem' }}>Thank you, {form.name.split(' ')[0]}. A senior project manager will review your enquiry and respond within one business day.</p>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'var(--fg-muted)', lineHeight: 1.7, margin: '0 0 2rem' }}>Thank you, {form.name.split(' ')[0]}. A senior project manager will review your enquiry and respond within 48 hours.</p>
                 <button onClick={() => { setForm(EMPTY); setSubmitted(false); }} style={{ background: 'none', border: '1px solid var(--border-color)', cursor: 'pointer', fontFamily: 'var(--font-body)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: 'var(--fg-muted)', padding: '10px 24px', transition: 'all 0.2s' }}>
                   Submit Another Enquiry
                 </button>
@@ -217,7 +217,7 @@ export default function ContactPage() {
 
                 <div>
                   <label style={labelStyle}>Project Description <span style={{ color: 'var(--red)' }}>*</span></label>
-                  <textarea value={form.message} onChange={e => set('message', e.target.value)} rows={5} placeholder="Describe your project — location, scope, timeline, and any specific requirements…" style={{ ...inputStyle('message'), resize: 'vertical', fontFamily: 'var(--font-body)' }} />
+                  <textarea value={form.message} onChange={e => set('message', e.target.value)} rows={5} placeholder="Describe your project, location, scope, timeline, and any specific requirements…" style={{ ...inputStyle('message'), resize: 'vertical', fontFamily: 'var(--font-body)' }} />
                   {errors.message && <p style={errorStyle}>{errors.message}</p>}
                 </div>
 
@@ -256,7 +256,7 @@ export default function ContactPage() {
             <SectionLabel>Our Location</SectionLabel>
             <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.5rem,2.5vw,2rem)', fontWeight: 700, color: 'var(--fg)', margin: '0 0 1.25rem' }}>Muscat, Sultanate of Oman</h3>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--fg-muted)', lineHeight: 1.75, margin: '0 0 2rem' }}>
-              Our registered office is in Muscat, with active project sites across the Sultanate — from Dhofar to the Batinah Coast. We are equipped for full mobilisation anywhere in Oman.
+              Our registered office is in Muscat, with active project sites across the Sultanate, from Dhofar to the Batinah Coast. We are equipped for full mobilisation anywhere in Oman.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
               {[
@@ -272,7 +272,7 @@ export default function ContactPage() {
           </div>
           <div style={{ background: 'var(--card-bg)', border: '1px solid var(--border-strong)', padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {[
-              { n: '< 1 day', label: 'Response Time', desc: 'Every enquiry answered by a project manager within one business day.' },
+              { n: '48 hrs', label: 'Response Time', desc: 'Every enquiry answered by a project manager within 48 hours.' },
               { n: '100%', label: 'Oman-Based Team', desc: 'All site management, engineering, and supervision performed in-house.' },
               { n: '24/7', label: 'Site Monitoring', desc: 'Active project sites monitored continuously by our operations team.' },
             ].map(item => (

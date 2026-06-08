@@ -32,6 +32,8 @@ export function Footer() {
     { label: isRTL ? 'سكني'            : 'Residential',        href: `/${locale}/projects?filter=Residential` },
     { label: isRTL ? 'تجاري'           : 'Commercial',         href: `/${locale}/projects?filter=Commercial` },
     { label: isRTL ? 'ضيافة'           : 'Hospitality',        href: `/${locale}/projects?filter=Hospitality` },
+    { label: isRTL ? 'صناعي'           : 'Industrial',         href: `/${locale}/projects?filter=Industrial` },
+    { label: isRTL ? 'صحي'             : 'Health',             href: `/${locale}/projects?filter=Health` },
   ];
 
   const NAV_LINKS = [
@@ -40,6 +42,7 @@ export function Footer() {
     { label: t('projects'),                                   href: `/${locale}/projects`       },
     { label: isRTL ? 'لماذا شركة البناء' : 'Why Al Binaa',   href: `/${locale}/why-al-binaa`   },
     { label: isRTL ? 'المؤهلات'          : 'Qualifications', href: `/${locale}/qualifications` },
+    { label: isRTL ? 'الأسئلة الشائعة'    : 'FAQ',           href: `/${locale}/faq`            },
     { label: t('contact'),                                    href: `/${locale}/contact`        },
   ];
 
@@ -63,7 +66,7 @@ export function Footer() {
               <img
                 src="/images/logo-dark.png"
                 alt="Al Binaa Construction & Industry SAOC"
-                style={{ height: 52, width: 'auto', display: 'block', marginInlineStart: isRTL ? 'auto' : 0, marginInlineEnd: isRTL ? 0 : 'auto' }}
+                style={{ height: 64, width: 'auto', display: 'block', marginInlineStart: isRTL ? 'auto' : 0, marginInlineEnd: isRTL ? 0 : 'auto' }}
               />
             </div>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.8, color: 'rgba(255,255,255,0.68)', marginBottom: '2rem', maxWidth: 310, marginInlineStart: isRTL ? 'auto' : 0 }}>
@@ -118,17 +121,24 @@ export function Footer() {
                 <div style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'rgba(255,255,255,0.72)', lineHeight: 1.65, whiteSpace: 'pre-line' }}>{item.value}</div>
               </div>
             ))}
-            <div style={{ display: 'flex', gap: 14, marginTop: '1.25rem', justifyContent: isRTL ? 'flex-end' : 'flex-start' }}>
+            <div style={{ display: 'flex', gap: 10, marginTop: '1.25rem', justifyContent: isRTL ? 'flex-end' : 'flex-start' }}>
               {[
-                { label: 'Instagram', href: 'https://www.instagram.com/albinaa_om/' },
-                { label: 'Facebook',  href: 'https://www.facebook.com/albinaaom/' },
-                { label: 'LinkedIn',  href: 'https://www.linkedin.com/company/al-binaa' },
+                { label: 'Facebook',  href: 'https://www.facebook.com/albinaaom',
+                  icon: <path d="M14 9h2.5V6H14c-1.93 0-3.5 1.57-3.5 3.5V11H8.5v3h2V21h3v-7h2.5l.5-3h-3V9.5c0-.28.22-.5.5-.5z" /> },
+                { label: 'Instagram', href: 'https://www.instagram.com/albinaa_om',
+                  icon: <><rect x="3.5" y="3.5" width="17" height="17" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none" /></> },
+                { label: 'YouTube',   href: 'https://www.youtube.com/@albinaa_om',
+                  icon: <><rect x="2.5" y="6" width="19" height="12" rx="3.5" /><path d="M10.5 9.2l4.2 2.8-4.2 2.8z" fill="currentColor" stroke="none" /></> },
+                { label: 'LinkedIn',  href: 'https://www.linkedin.com/company/albinaaom',
+                  icon: <><rect x="3.5" y="3.5" width="17" height="17" rx="2.5" /><line x1="7.5" y1="10.5" x2="7.5" y2="16.5" /><circle cx="7.5" cy="7.5" r="0.9" fill="currentColor" stroke="none" /><path d="M11 16.5v-3.2c0-1.3.9-2.3 2.1-2.3s2.1 1 2.1 2.3v3.2" /></> },
               ].map(s => (
-                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                  style={{ color: 'rgba(255,255,255,0.58)', fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'var(--font-body)', fontWeight: 500, transition: 'color 0.18s' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.58)')}>
-                  {s.label}
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} title={s.label}
+                  style={{ width: 38, height: 38, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,255,255,0.14)', borderRadius: '50%', color: 'rgba(255,255,255,0.6)', transition: 'color 0.18s, border-color 0.18s, background 0.18s' }}
+                  onMouseEnter={e => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = 'var(--red)'; e.currentTarget.style.background = 'var(--red)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.6)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.14)'; e.currentTarget.style.background = 'transparent'; }}>
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    {s.icon}
+                  </svg>
                 </a>
               ))}
             </div>

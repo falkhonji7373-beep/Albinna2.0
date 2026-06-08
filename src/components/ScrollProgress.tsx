@@ -9,14 +9,14 @@ export function ScrollProgress() {
     const bar = barRef.current;
     if (!bar) return;
 
-    // Respect prefers-reduced-motion — hide bar entirely
+    // Respect prefers-reduced-motion, hide bar entirely
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reducedMotion) {
       bar.style.display = 'none';
       return;
     }
 
-    // Write directly to the DOM — no React state, no re-render, no reconciliation.
+    // Write directly to the DOM, no React state, no re-render, no reconciliation.
     // scaleX() runs on the GPU compositor thread: zero layout, zero paint.
     const onScroll = () => {
       const total = document.documentElement.scrollHeight - window.innerHeight;
@@ -49,12 +49,12 @@ export function ScrollProgress() {
         style={{
           height: '100%',
           background: 'var(--red)',
-          /* scaleX from 0→1 instead of width 0→100% — stays on compositor thread */
+          /* scaleX from 0→1 instead of width 0→100%, stays on compositor thread */
           transform: 'scaleX(0)',
           transformOrigin: 'left center',
           /* Promote to GPU layer upfront so first scroll frame is instant */
           willChange: 'transform',
-          /* Smooth micro-lag between scroll position and bar — feels silk */
+          /* Smooth micro-lag between scroll position and bar, feels silk */
           transition: 'transform 60ms linear',
         }}
       />

@@ -30,8 +30,8 @@ export async function generateMetadata({
   const desc     = isRTL ? ((project as any).descAr     ?? project.desc)     : project.desc;
 
   const metaTitle = isRTL
-    ? `${title} — ${location} | البناء للإنشاءات عُمان`
-    : `${title} — ${location} | Al Binaa Construction Oman`;
+    ? `${title}، ${location} | البناء للإنشاءات عُمان`
+    : `${title}, ${location} | Al Binaa Construction Oman`;
 
   return {
     title: { absolute: metaTitle },

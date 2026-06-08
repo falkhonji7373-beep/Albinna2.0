@@ -90,9 +90,9 @@ export function Nav() {
           onClick={() => { setMenuOpen(false); setDropdown(null); }}>
           <img
             src={scrolled && !isDark ? '/images/logo.png' : '/images/logo-dark.png'}
-            alt="Al Binaa Construction & Industry"
+            alt="Al Binaa Construction & Industry SAOC"
             style={{
-              height: 44, width: 'auto', display: 'block',
+              height: 60, width: 'auto', display: 'block',
               transition: 'opacity 0.3s, filter 0.35s',
               filter: scrolled ? 'none' : 'drop-shadow(0 1px 6px rgba(0,0,0,0.55))',
             }}
@@ -130,10 +130,14 @@ export function Nav() {
                     top: '100%',
                     ...(isRTL ? { right: '50%', transform: 'translateX(50%)' }
                                : { left: '50%', transform: 'translateX(-50%)' }),
+                  }}>
+                  <div style={{
                     background: dropBg,
-                    boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
+                    boxShadow: '0 24px 70px rgba(0,0,0,0.18)',
                     minWidth: 520, display: 'flex', borderTop: '2px solid var(--red)',
-                    animation: 'dropIn 0.18s ease',
+                    transformOrigin: 'top center',
+                    willChange: 'transform, opacity',
+                    animation: 'megaDrop 0.44s cubic-bezier(0.16,1,0.3,1) both',
                     ...megaMenuFlex,
                   }}>
                     <div style={{ flex: 1, padding: '1rem 0' }}>
@@ -151,7 +155,9 @@ export function Nav() {
                             padding: '0.65rem 1.25rem',
                             borderLeft: isRTL ? 'none' : '2px solid transparent',
                             borderRight: isRTL ? '2px solid transparent' : 'none',
-                            transition: 'all 0.15s',
+                            transition: 'background 0.15s, border-color 0.15s',
+                            animation: `megaItem 0.5s cubic-bezier(0.16,1,0.3,1) both`,
+                            animationDelay: `${0.1 + i * 0.06}s`,
                           }}
                             onMouseEnter={e => {
                               e.currentTarget.style[isRTL ? 'borderRightColor' : 'borderLeftColor'] = 'var(--red)';
@@ -174,6 +180,8 @@ export function Nav() {
                           borderTop: `1px solid ${isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.07)'}`,
                           marginTop: '0.2rem',
                           textAlign: isRTL ? 'right' : 'left',
+                          animation: 'megaItem 0.5s cubic-bezier(0.16,1,0.3,1) both',
+                          animationDelay: `${0.1 + MEGA_MENUS[key as 'services' | 'projects'].items.length * 0.06}s`,
                         }}>
                           <Link href={`/${locale}${href.replace(`/${locale}`, '')}`} onClick={() => setDropdown(null)}
                             style={{ color: 'var(--red)', fontFamily: 'var(--font-body)', fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600, textDecoration: 'none' }}>
@@ -183,12 +191,13 @@ export function Nav() {
                       )}
                     </div>
                   </div>
+                  </div>
                 )}
               </div>
             );
           })}
 
-          {/* Phone number — high-intent users */}
+          {/* Phone number, high-intent users */}
           {!isRTL && (
             <a href="tel:+96824693300" style={{
               color: textColor, textDecoration: 'none',
@@ -246,7 +255,7 @@ export function Nav() {
           </button>
         </div>
 
-        {/* Hamburger — mobile */}
+        {/* Hamburger, mobile */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           {/* Mobile language switcher */}
           <button
